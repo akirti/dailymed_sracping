@@ -1,0 +1,1758 @@
+{
+    "$schema": "http://json-schema.org/draft-06/schema#",
+    "$ref": "#/definitions/Welcome7",
+    "definitions": {
+        "Welcome7": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "document": {
+                    "$ref": "#/definitions/Document"
+                }
+            },
+            "required": [
+                "document"
+            ],
+            "title": "Welcome7"
+        },
+        "Document": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "id": {
+                    "$ref": "#/definitions/SetIDClass"
+                },
+                "code": {
+                    "$ref": "#/definitions/FormCodeClass"
+                },
+                "title": {
+                    "$ref": "#/definitions/Title"
+                },
+                "effectiveTime": {
+                    "$ref": "#/definitions/EffectiveTime"
+                },
+                "setId": {
+                    "$ref": "#/definitions/SetIDClass"
+                },
+                "versionNumber": {
+                    "$ref": "#/definitions/EffectiveTime"
+                },
+                "author": {
+                    "$ref": "#/definitions/DocumentAuthor"
+                },
+                "component": {
+                    "$ref": "#/definitions/DocumentComponent"
+                },
+                "_xmlns": {
+                    "type": "string"
+                },
+                "_xmlns:xsi": {
+                    "type": "string",
+                    "format": "uri",
+                    "qt-uri-protocols": [
+                        "http"
+                    ]
+                },
+                "_xsi:schemaLocation": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "_xmlns",
+                "_xmlns:xsi",
+                "_xsi:schemaLocation",
+                "author",
+                "code",
+                "component",
+                "effectiveTime",
+                "id",
+                "setId",
+                "title",
+                "versionNumber"
+            ],
+            "title": "Document"
+        },
+        "DocumentAuthor": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "time": {
+                    "type": "string"
+                },
+                "assignedEntity": {
+                    "$ref": "#/definitions/AuthorAssignedEntity"
+                }
+            },
+            "required": [
+                "assignedEntity",
+                "time"
+            ],
+            "title": "DocumentAuthor"
+        },
+        "AuthorAssignedEntity": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "representedOrganization": {
+                    "$ref": "#/definitions/RepresentedOrganization"
+                }
+            },
+            "required": [
+                "representedOrganization"
+            ],
+            "title": "AuthorAssignedEntity"
+        },
+        "RepresentedOrganization": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "id": {
+                    "$ref": "#/definitions/AssignedOrganizationID"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "assignedEntity": {
+                    "$ref": "#/definitions/RepresentedOrganizationAssignedEntity"
+                }
+            },
+            "required": [
+                "assignedEntity",
+                "id",
+                "name"
+            ],
+            "title": "RepresentedOrganization"
+        },
+        "RepresentedOrganizationAssignedEntity": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "assignedOrganization": {
+                    "$ref": "#/definitions/PurpleAssignedOrganization"
+                }
+            },
+            "required": [
+                "assignedOrganization"
+            ],
+            "title": "RepresentedOrganizationAssignedEntity"
+        },
+        "PurpleAssignedOrganization": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "id": {
+                    "$ref": "#/definitions/AssignedOrganizationID"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "assignedEntity": {
+                    "$ref": "#/definitions/AssignedOrganizationAssignedEntity"
+                }
+            },
+            "required": [
+                "assignedEntity",
+                "id",
+                "name"
+            ],
+            "title": "PurpleAssignedOrganization"
+        },
+        "AssignedOrganizationAssignedEntity": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "assignedOrganization": {
+                    "$ref": "#/definitions/FluffyAssignedOrganization"
+                },
+                "performance": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/Performance"
+                    }
+                }
+            },
+            "required": [
+                "assignedOrganization",
+                "performance"
+            ],
+            "title": "AssignedOrganizationAssignedEntity"
+        },
+        "FluffyAssignedOrganization": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "id": {
+                    "$ref": "#/definitions/AssignedOrganizationID"
+                },
+                "name": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "id",
+                "name"
+            ],
+            "title": "FluffyAssignedOrganization"
+        },
+        "AssignedOrganizationID": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "_extension": {
+                    "type": "string"
+                },
+                "_root": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "_extension",
+                "_root"
+            ],
+            "title": "AssignedOrganizationID"
+        },
+        "Performance": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "actDefinition": {
+                    "$ref": "#/definitions/ActDefinition"
+                }
+            },
+            "required": [
+                "actDefinition"
+            ],
+            "title": "Performance"
+        },
+        "ActDefinition": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "code": {
+                    "$ref": "#/definitions/FormCodeClass"
+                },
+                "product": {
+                    "$ref": "#/definitions/Product"
+                }
+            },
+            "required": [
+                "code",
+                "product"
+            ],
+            "title": "ActDefinition"
+        },
+        "FormCodeClass": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "_code": {
+                    "type": "string"
+                },
+                "_codeSystem": {
+                    "$ref": "#/definitions/FormCodeCodeSystem"
+                },
+                "_displayName": {
+                    "type": "string"
+                },
+                "_xsi:type": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "_code",
+                "_codeSystem",
+                "_displayName"
+            ],
+            "title": "FormCodeClass"
+        },
+        "Product": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "manufacturedProduct": {
+                    "$ref": "#/definitions/ProductManufacturedProduct"
+                }
+            },
+            "required": [
+                "manufacturedProduct"
+            ],
+            "title": "Product"
+        },
+        "ProductManufacturedProduct": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "manufacturedMaterialKind": {
+                    "$ref": "#/definitions/DefiningMaterialKind"
+                },
+                "_classCode": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "_classCode",
+                "manufacturedMaterialKind"
+            ],
+            "title": "ProductManufacturedProduct"
+        },
+        "DefiningMaterialKind": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "code": {
+                    "$ref": "#/definitions/DefiningMaterialKindCode"
+                }
+            },
+            "required": [
+                "code"
+            ],
+            "title": "DefiningMaterialKind"
+        },
+        "DefiningMaterialKindCode": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "_codeSystem": {
+                    "$ref": "#/definitions/PurpleCodeSystem"
+                },
+                "_code": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "_code",
+                "_codeSystem"
+            ],
+            "title": "DefiningMaterialKindCode"
+        },
+        "DocumentComponent": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "structuredBody": {
+                    "$ref": "#/definitions/StructuredBody"
+                }
+            },
+            "required": [
+                "structuredBody"
+            ],
+            "title": "DocumentComponent"
+        },
+        "StructuredBody": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "component": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/StructuredBodyComponent"
+                    }
+                }
+            },
+            "required": [
+                "component"
+            ],
+            "title": "StructuredBody"
+        },
+        "StructuredBodyComponent": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "section": {
+                    "$ref": "#/definitions/PurpleSection"
+                }
+            },
+            "required": [
+                "section"
+            ],
+            "title": "StructuredBodyComponent"
+        },
+        "PurpleSection": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "id": {
+                    "$ref": "#/definitions/SetIDClass"
+                },
+                "code": {
+                    "$ref": "#/definitions/FormCodeClass"
+                },
+                "effectiveTime": {
+                    "$ref": "#/definitions/EffectiveTime"
+                },
+                "subject": {
+                    "$ref": "#/definitions/Subject"
+                },
+                "component": {
+                    "$ref": "#/definitions/ComponentUnion"
+                },
+                "title": {
+                    "type": "string"
+                },
+                "text": {
+                    "$ref": "#/definitions/FluffyText"
+                },
+                "_ID": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "code",
+                "effectiveTime",
+                "id"
+            ],
+            "title": "PurpleSection"
+        },
+        "PurpleComponent": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "observationMedia": {
+                    "$ref": "#/definitions/ObservationMedia"
+                },
+                "section": {
+                    "$ref": "#/definitions/FluffySection"
+                }
+            },
+            "required": [],
+            "title": "PurpleComponent"
+        },
+        "FluffyComponent": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "observationMedia": {
+                    "$ref": "#/definitions/ObservationMedia"
+                }
+            },
+            "required": [
+                "observationMedia"
+            ],
+            "title": "FluffyComponent"
+        },
+        "ObservationMedia": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "text": {
+                    "type": "string"
+                },
+                "value": {
+                    "$ref": "#/definitions/ObservationMediaValue"
+                },
+                "_ID": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "_ID",
+                "text",
+                "value"
+            ],
+            "title": "ObservationMedia"
+        },
+        "ObservationMediaValue": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "reference": {
+                    "$ref": "#/definitions/EffectiveTime"
+                },
+                "_xsi:type": {
+                    "type": "string"
+                },
+                "_mediaType": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "_mediaType",
+                "_xsi:type",
+                "reference"
+            ],
+            "title": "ObservationMediaValue"
+        },
+        "EffectiveTime": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "_value": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "_value"
+            ],
+            "title": "EffectiveTime"
+        },
+        "FluffySection": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "id": {
+                    "$ref": "#/definitions/SetIDClass"
+                },
+                "code": {
+                    "$ref": "#/definitions/FormCodeClass"
+                },
+                "title": {
+                    "type": "string"
+                },
+                "text": {
+                    "$ref": "#/definitions/PurpleText"
+                },
+                "effectiveTime": {
+                    "$ref": "#/definitions/EffectiveTime"
+                },
+                "_ID": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "_ID",
+                "code",
+                "effectiveTime",
+                "id",
+                "text",
+                "title"
+            ],
+            "title": "FluffySection"
+        },
+        "SetIDClass": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "_root": {
+                    "type": "string",
+                    "format": "uuid"
+                }
+            },
+            "required": [
+                "_root"
+            ],
+            "title": "SetIDClass"
+        },
+        "PurpleText": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "paragraph": {
+                    "$ref": "#/definitions/StickyParagraph"
+                },
+                "br": {
+                    "$ref": "#/definitions/Br"
+                },
+                "content": {
+                    "$ref": "#/definitions/TextContent"
+                }
+            },
+            "required": [
+                "paragraph"
+            ],
+            "title": "PurpleText"
+        },
+        "TextContent": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "br": {
+                    "type": "string"
+                },
+                "_styleCode": {
+                    "$ref": "#/definitions/StyleCode"
+                }
+            },
+            "required": [
+                "_styleCode",
+                "br"
+            ],
+            "title": "TextContent"
+        },
+        "PurpleParagraph": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "content": {
+                    "$ref": "#/definitions/IndigoContent"
+                },
+                "__text": {
+                    "type": "string"
+                },
+                "br": {
+                    "$ref": "#/definitions/Br"
+                }
+            },
+            "required": [
+                "content"
+            ],
+            "title": "PurpleParagraph"
+        },
+        "FluffyParagraph": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "content": {
+                    "$ref": "#/definitions/HilariousContent"
+                },
+                "br": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "__text": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "__text",
+                "br"
+            ],
+            "title": "FluffyParagraph"
+        },
+        "PurpleContent": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "_styleCode": {
+                    "$ref": "#/definitions/StyleCode"
+                },
+                "__text": {
+                    "type": "string"
+                },
+                "linkHtml": {
+                    "$ref": "#/definitions/LinkHTMLUnion"
+                },
+                "br": {
+                    "$ref": "#/definitions/Br"
+                },
+                "content": {
+                    "$ref": "#/definitions/IndecentContent"
+                }
+            },
+            "required": [
+                "_styleCode"
+            ],
+            "title": "PurpleContent"
+        },
+        "FluffyContent": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "_styleCode": {
+                    "$ref": "#/definitions/StyleCode"
+                },
+                "__text": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "__text",
+                "_styleCode"
+            ],
+            "title": "FluffyContent"
+        },
+        "LinkHTMLElement": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "_href": {
+                    "type": "string"
+                },
+                "__text": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "__text",
+                "_href"
+            ],
+            "title": "LinkHTMLElement"
+        },
+        "TentacledContent": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "_styleCode": {
+                    "$ref": "#/definitions/StyleCode"
+                },
+                "__text": {
+                    "type": "string"
+                },
+                "linkHtml": {
+                    "$ref": "#/definitions/LinkHTMLElement"
+                }
+            },
+            "required": [
+                "_styleCode"
+            ],
+            "title": "TentacledContent"
+        },
+        "StickyContent": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "linkHtml": {
+                    "$ref": "#/definitions/LinkHTMLElement"
+                },
+                "_styleCode": {
+                    "$ref": "#/definitions/StyleCode"
+                }
+            },
+            "required": [
+                "_styleCode",
+                "linkHtml"
+            ],
+            "title": "StickyContent"
+        },
+        "Subject": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "manufacturedProduct": {
+                    "$ref": "#/definitions/SubjectManufacturedProduct"
+                }
+            },
+            "required": [
+                "manufacturedProduct"
+            ],
+            "title": "Subject"
+        },
+        "SubjectManufacturedProduct": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "manufacturedProduct": {
+                    "$ref": "#/definitions/ManufacturedProductManufacturedProduct"
+                },
+                "subjectOf": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/ManufacturedProductSubjectOf"
+                    }
+                },
+                "consumedIn": {
+                    "$ref": "#/definitions/ConsumedIn"
+                }
+            },
+            "required": [
+                "consumedIn",
+                "manufacturedProduct",
+                "subjectOf"
+            ],
+            "title": "SubjectManufacturedProduct"
+        },
+        "ConsumedIn": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "substanceAdministration": {
+                    "$ref": "#/definitions/SubstanceAdministration"
+                }
+            },
+            "required": [
+                "substanceAdministration"
+            ],
+            "title": "ConsumedIn"
+        },
+        "SubstanceAdministration": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "routeCode": {
+                    "$ref": "#/definitions/FormCodeClass"
+                }
+            },
+            "required": [
+                "routeCode"
+            ],
+            "title": "SubstanceAdministration"
+        },
+        "ManufacturedProductManufacturedProduct": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "code": {
+                    "$ref": "#/definitions/DefiningMaterialKindCode"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "formCode": {
+                    "$ref": "#/definitions/FormCodeClass"
+                },
+                "asEntityWithGeneric": {
+                    "$ref": "#/definitions/AsEntityWithGeneric"
+                },
+                "asEquivalentEntity": {
+                    "$ref": "#/definitions/AsEquivalentEntity"
+                },
+                "ingredient": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/Ingredient"
+                    }
+                },
+                "asContent": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/AsContent"
+                    }
+                }
+            },
+            "required": [
+                "asContent",
+                "asEntityWithGeneric",
+                "asEquivalentEntity",
+                "code",
+                "formCode",
+                "ingredient",
+                "name"
+            ],
+            "title": "ManufacturedProductManufacturedProduct"
+        },
+        "AsContent": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "quantity": {
+                    "$ref": "#/definitions/AsContentQuantity"
+                },
+                "containerPackagedProduct": {
+                    "$ref": "#/definitions/ContainerPackagedProduct"
+                },
+                "subjectOf": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/AsContentSubjectOf"
+                    }
+                }
+            },
+            "required": [
+                "containerPackagedProduct",
+                "quantity",
+                "subjectOf"
+            ],
+            "title": "AsContent"
+        },
+        "ContainerPackagedProduct": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "code": {
+                    "$ref": "#/definitions/DefiningMaterialKindCode"
+                },
+                "formCode": {
+                    "$ref": "#/definitions/FormCodeClass"
+                }
+            },
+            "required": [
+                "code",
+                "formCode"
+            ],
+            "title": "ContainerPackagedProduct"
+        },
+        "AsContentQuantity": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "numerator": {
+                    "$ref": "#/definitions/Ator"
+                },
+                "denominator": {
+                    "$ref": "#/definitions/EffectiveTime"
+                }
+            },
+            "required": [
+                "denominator",
+                "numerator"
+            ],
+            "title": "AsContentQuantity"
+        },
+        "Ator": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "_value": {
+                    "type": "string"
+                },
+                "_unit": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "_unit",
+                "_value"
+            ],
+            "title": "Ator"
+        },
+        "AsContentSubjectOf": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "characteristic": {
+                    "$ref": "#/definitions/PurpleCharacteristic"
+                },
+                "marketingAct": {
+                    "$ref": "#/definitions/MarketingAct"
+                }
+            },
+            "required": [],
+            "title": "AsContentSubjectOf"
+        },
+        "PurpleCharacteristic": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "code": {
+                    "$ref": "#/definitions/DefiningMaterialKindCode"
+                },
+                "value": {
+                    "$ref": "#/definitions/FormCodeClass"
+                }
+            },
+            "required": [
+                "code",
+                "value"
+            ],
+            "title": "PurpleCharacteristic"
+        },
+        "MarketingAct": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "code": {
+                    "$ref": "#/definitions/DefiningMaterialKindCode"
+                },
+                "statusCode": {
+                    "$ref": "#/definitions/StatusCode"
+                },
+                "effectiveTime": {
+                    "$ref": "#/definitions/MarketingActEffectiveTime"
+                }
+            },
+            "required": [
+                "code",
+                "effectiveTime",
+                "statusCode"
+            ],
+            "title": "MarketingAct"
+        },
+        "MarketingActEffectiveTime": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "low": {
+                    "$ref": "#/definitions/EffectiveTime"
+                }
+            },
+            "required": [
+                "low"
+            ],
+            "title": "MarketingActEffectiveTime"
+        },
+        "StatusCode": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "_code": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "_code"
+            ],
+            "title": "StatusCode"
+        },
+        "AsEntityWithGeneric": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "genericMedicine": {
+                    "$ref": "#/definitions/GenericMedicine"
+                }
+            },
+            "required": [
+                "genericMedicine"
+            ],
+            "title": "AsEntityWithGeneric"
+        },
+        "GenericMedicine": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "name": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "name"
+            ],
+            "title": "GenericMedicine"
+        },
+        "AsEquivalentEntity": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "code": {
+                    "$ref": "#/definitions/DefiningMaterialKindCode"
+                },
+                "definingMaterialKind": {
+                    "$ref": "#/definitions/DefiningMaterialKind"
+                },
+                "_classCode": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "_classCode",
+                "code",
+                "definingMaterialKind"
+            ],
+            "title": "AsEquivalentEntity"
+        },
+        "Ingredient": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "quantity": {
+                    "$ref": "#/definitions/IngredientQuantity"
+                },
+                "ingredientSubstance": {
+                    "$ref": "#/definitions/IngredientSubstance"
+                },
+                "_classCode": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "_classCode",
+                "ingredientSubstance"
+            ],
+            "title": "Ingredient"
+        },
+        "IngredientSubstance": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "code": {
+                    "$ref": "#/definitions/DefiningMaterialKindCode"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "activeMoiety": {
+                    "$ref": "#/definitions/IngredientSubstanceActiveMoiety"
+                }
+            },
+            "required": [
+                "code",
+                "name"
+            ],
+            "title": "IngredientSubstance"
+        },
+        "IngredientSubstanceActiveMoiety": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "activeMoiety": {
+                    "$ref": "#/definitions/ActiveMoietyActiveMoiety"
+                }
+            },
+            "required": [
+                "activeMoiety"
+            ],
+            "title": "IngredientSubstanceActiveMoiety"
+        },
+        "ActiveMoietyActiveMoiety": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "code": {
+                    "$ref": "#/definitions/DefiningMaterialKindCode"
+                },
+                "name": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "code",
+                "name"
+            ],
+            "title": "ActiveMoietyActiveMoiety"
+        },
+        "IngredientQuantity": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "numerator": {
+                    "$ref": "#/definitions/Ator"
+                },
+                "denominator": {
+                    "$ref": "#/definitions/Ator"
+                }
+            },
+            "required": [
+                "denominator",
+                "numerator"
+            ],
+            "title": "IngredientQuantity"
+        },
+        "ManufacturedProductSubjectOf": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "approval": {
+                    "$ref": "#/definitions/Approval"
+                },
+                "marketingAct": {
+                    "$ref": "#/definitions/MarketingAct"
+                },
+                "characteristic": {
+                    "$ref": "#/definitions/FluffyCharacteristic"
+                },
+                "policy": {
+                    "$ref": "#/definitions/Policy"
+                }
+            },
+            "required": [],
+            "title": "ManufacturedProductSubjectOf"
+        },
+        "Approval": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "id": {
+                    "$ref": "#/definitions/AssignedOrganizationID"
+                },
+                "code": {
+                    "$ref": "#/definitions/FormCodeClass"
+                },
+                "author": {
+                    "$ref": "#/definitions/ApprovalAuthor"
+                }
+            },
+            "required": [
+                "author",
+                "code",
+                "id"
+            ],
+            "title": "Approval"
+        },
+        "ApprovalAuthor": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "territorialAuthority": {
+                    "$ref": "#/definitions/TerritorialAuthority"
+                }
+            },
+            "required": [
+                "territorialAuthority"
+            ],
+            "title": "ApprovalAuthor"
+        },
+        "TerritorialAuthority": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "territory": {
+                    "$ref": "#/definitions/DefiningMaterialKind"
+                }
+            },
+            "required": [
+                "territory"
+            ],
+            "title": "TerritorialAuthority"
+        },
+        "FluffyCharacteristic": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "code": {
+                    "$ref": "#/definitions/DefiningMaterialKindCode"
+                },
+                "value": {
+                    "$ref": "#/definitions/CharacteristicValue"
+                },
+                "_classCode": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "_classCode",
+                "code",
+                "value"
+            ],
+            "title": "FluffyCharacteristic"
+        },
+        "CharacteristicValue": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "_xsi:type": {
+                    "type": "string"
+                },
+                "_code": {
+                    "type": "string"
+                },
+                "_codeSystem": {
+                    "$ref": "#/definitions/FormCodeCodeSystem"
+                },
+                "_displayName": {
+                    "type": "string"
+                },
+                "_unit": {
+                    "type": "string"
+                },
+                "_value": {
+                    "type": "string",
+                    "format": "integer"
+                },
+                "__text": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "_xsi:type"
+            ],
+            "title": "CharacteristicValue"
+        },
+        "Policy": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "code": {
+                    "$ref": "#/definitions/FormCodeClass"
+                },
+                "_classCode": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "_classCode",
+                "code"
+            ],
+            "title": "Policy"
+        },
+        "FluffyText": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "paragraph": {
+                    "$ref": "#/definitions/IndecentParagraph"
+                },
+                "br": {
+                    "$ref": "#/definitions/Br"
+                },
+                "renderMultiMedia": {
+                    "$ref": "#/definitions/RenderMultiMediaUnion"
+                },
+                "list": {
+                    "$ref": "#/definitions/List"
+                },
+                "table": {
+                    "$ref": "#/definitions/Table"
+                },
+                "content": {
+                    "$ref": "#/definitions/TextContent"
+                }
+            },
+            "required": [
+                "paragraph"
+            ],
+            "title": "FluffyText"
+        },
+        "List": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "item": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "_listType": {
+                    "type": "string"
+                },
+                "_styleCode": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "_listType",
+                "_styleCode",
+                "item"
+            ],
+            "title": "List"
+        },
+        "TentacledParagraph": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "br": {
+                    "$ref": "#/definitions/Br"
+                },
+                "__text": {
+                    "type": "string"
+                },
+                "content": {
+                    "$ref": "#/definitions/IndigoContent"
+                },
+                "sub": {
+                    "$ref": "#/definitions/Sub"
+                }
+            },
+            "required": [
+                "__text"
+            ],
+            "title": "TentacledParagraph"
+        },
+        "ContentClass": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "content": {
+                    "$ref": "#/definitions/AmbitiousContent"
+                },
+                "br": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "__text": {
+                    "type": "string"
+                },
+                "_styleCode": {
+                    "$ref": "#/definitions/StyleCode"
+                }
+            },
+            "required": [],
+            "title": "ContentClass"
+        },
+        "RenderMultiMediaElement": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "_referencedObject": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "_referencedObject"
+            ],
+            "title": "RenderMultiMediaElement"
+        },
+        "PurpleRenderMultiMedia": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "_ID": {
+                    "type": "string"
+                },
+                "_referencedObject": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "_ID",
+                "_referencedObject"
+            ],
+            "title": "PurpleRenderMultiMedia"
+        },
+        "Table": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "tbody": {
+                    "$ref": "#/definitions/Tbody"
+                },
+                "_cellspacing": {
+                    "type": "string",
+                    "format": "integer"
+                },
+                "_cellpadding": {
+                    "type": "string",
+                    "format": "integer"
+                },
+                "_border": {
+                    "type": "string",
+                    "format": "integer"
+                }
+            },
+            "required": [
+                "_border",
+                "_cellpadding",
+                "_cellspacing",
+                "tbody"
+            ],
+            "title": "Table"
+        },
+        "Tbody": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "tr": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/Tr"
+                    }
+                }
+            },
+            "required": [
+                "tr"
+            ],
+            "title": "Tbody"
+        },
+        "Tr": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "td": {
+                    "$ref": "#/definitions/TdUnion"
+                },
+                "_styleCode": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "td"
+            ],
+            "title": "Tr"
+        },
+        "TdElement": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "br": {
+                    "$ref": "#/definitions/Br"
+                },
+                "content": {
+                    "$ref": "#/definitions/CunningContent"
+                },
+                "_styleCode": {
+                    "type": "string"
+                },
+                "_align": {
+                    "type": "string"
+                },
+                "_valign": {
+                    "type": "string"
+                },
+                "__text": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "_styleCode",
+                "_valign"
+            ],
+            "title": "TdElement"
+        },
+        "PurpleTd": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "content": {
+                    "$ref": "#/definitions/MagentaContent"
+                },
+                "_styleCode": {
+                    "type": "string"
+                },
+                "_valign": {
+                    "type": "string"
+                },
+                "br": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "__text": {
+                    "type": "string"
+                },
+                "_align": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "_styleCode",
+                "_valign"
+            ],
+            "title": "PurpleTd"
+        },
+        "Title": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "br": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "__text": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "__text",
+                "br"
+            ],
+            "title": "Title"
+        },
+        "ComponentUnion": {
+            "anyOf": [
+                {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/PurpleComponent"
+                    }
+                },
+                {
+                    "$ref": "#/definitions/FluffyComponent"
+                }
+            ],
+            "title": "ComponentUnion"
+        },
+        "Br": {
+            "anyOf": [
+                {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                {
+                    "type": "string"
+                }
+            ],
+            "title": "Br"
+        },
+        "StickyParagraph": {
+            "anyOf": [
+                {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/IndigoParagraph"
+                    }
+                },
+                {
+                    "$ref": "#/definitions/FluffyParagraph"
+                },
+                {
+                    "type": "string"
+                }
+            ],
+            "title": "StickyParagraph"
+        },
+        "IndigoParagraph": {
+            "anyOf": [
+                {
+                    "$ref": "#/definitions/PurpleParagraph"
+                },
+                {
+                    "type": "string"
+                }
+            ],
+            "title": "IndigoParagraph"
+        },
+        "IndigoContent": {
+            "anyOf": [
+                {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/PurpleContent"
+                    }
+                },
+                {
+                    "$ref": "#/definitions/PurpleContent"
+                }
+            ],
+            "title": "IndigoContent"
+        },
+        "IndecentContent": {
+            "anyOf": [
+                {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/PurpleContent"
+                    }
+                },
+                {
+                    "$ref": "#/definitions/FluffyContent"
+                }
+            ],
+            "title": "IndecentContent"
+        },
+        "LinkHTMLUnion": {
+            "anyOf": [
+                {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/LinkHTMLElement"
+                    }
+                },
+                {
+                    "$ref": "#/definitions/LinkHTMLElement"
+                }
+            ],
+            "title": "LinkHTMLUnion"
+        },
+        "HilariousContent": {
+            "anyOf": [
+                {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/TentacledContent"
+                    }
+                },
+                {
+                    "$ref": "#/definitions/StickyContent"
+                }
+            ],
+            "title": "HilariousContent"
+        },
+        "IndecentParagraph": {
+            "anyOf": [
+                {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/HilariousParagraph"
+                    }
+                },
+                {
+                    "$ref": "#/definitions/ContentClass"
+                }
+            ],
+            "title": "IndecentParagraph"
+        },
+        "HilariousParagraph": {
+            "anyOf": [
+                {
+                    "$ref": "#/definitions/TentacledParagraph"
+                },
+                {
+                    "type": "string"
+                }
+            ],
+            "title": "HilariousParagraph"
+        },
+        "Sub": {
+            "anyOf": [
+                {
+                    "type": "array",
+                    "items": {
+                        "type": "string",
+                        "format": "integer"
+                    }
+                },
+                {
+                    "type": "string",
+                    "format": "integer"
+                }
+            ],
+            "title": "Sub"
+        },
+        "AmbitiousContent": {
+            "anyOf": [
+                {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/PurpleContent"
+                    }
+                },
+                {
+                    "$ref": "#/definitions/FluffyContent"
+                }
+            ],
+            "title": "AmbitiousContent"
+        },
+        "RenderMultiMediaUnion": {
+            "anyOf": [
+                {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/RenderMultiMediaElement"
+                    }
+                },
+                {
+                    "$ref": "#/definitions/PurpleRenderMultiMedia"
+                }
+            ],
+            "title": "RenderMultiMediaUnion"
+        },
+        "TdUnion": {
+            "anyOf": [
+                {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/TdElement"
+                    }
+                },
+                {
+                    "$ref": "#/definitions/PurpleTd"
+                }
+            ],
+            "title": "TdUnion"
+        },
+        "CunningContent": {
+            "anyOf": [
+                {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/FluffyContent"
+                    }
+                },
+                {
+                    "$ref": "#/definitions/FluffyContent"
+                }
+            ],
+            "title": "CunningContent"
+        },
+        "MagentaContent": {
+            "anyOf": [
+                {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/FluffyContent"
+                    }
+                },
+                {
+                    "$ref": "#/definitions/ContentClass"
+                }
+            ],
+            "title": "MagentaContent"
+        },
+        "FormCodeCodeSystem": {
+            "type": "string",
+            "enum": [
+                "2.16.840.1.113883.3.26.1.1",
+                "2.16.840.1.113883.6.1"
+            ],
+            "title": "FormCodeCodeSystem"
+        },
+        "PurpleCodeSystem": {
+            "type": "string",
+            "enum": [
+                "2.16.840.1.113883.6.69",
+                "2.16.840.1.113883.1.11.19255",
+                "2.16.840.1.113883.3.26.1.1",
+                "2.16.840.1.113883.4.9",
+                "2.16.840.1.113883.5.28"
+            ],
+            "title": "PurpleCodeSystem"
+        },
+        "StyleCode": {
+            "type": "string",
+            "enum": [
+                "bold",
+                "underline",
+                "italics"
+            ],
+            "title": "StyleCode"
+        }
+    }
+}

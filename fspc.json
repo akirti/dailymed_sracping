@@ -1,0 +1,1445 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "Generated schema for Root",
+    "type": "object",
+    "properties": {
+      "document": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "object",
+            "properties": {
+              "_root": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "_root"
+            ]
+          },
+          "code": {
+            "type": "object",
+            "properties": {
+              "_code": {
+                "type": "string"
+              },
+              "_codeSystem": {
+                "type": "string"
+              },
+              "_displayName": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "_code",
+              "_codeSystem",
+              "_displayName"
+            ]
+          },
+          "title": {
+            "type": "object",
+            "properties": {
+              "br": {
+                "type": "array",
+                "items": {}
+              },
+              "__text": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "br",
+              "__text"
+            ]
+          },
+          "effectiveTime": {
+            "type": "object",
+            "properties": {
+              "_value": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "_value"
+            ]
+          },
+          "setId": {
+            "type": "object",
+            "properties": {
+              "_root": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "_root"
+            ]
+          },
+          "versionNumber": {
+            "type": "object",
+            "properties": {
+              "_value": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "_value"
+            ]
+          },
+          "author": {
+            "type": "object",
+            "properties": {
+              "time": {
+                "type": "string"
+              },
+              "assignedEntity": {
+                "type": "object",
+                "properties": {
+                  "representedOrganization": {
+                    "type": "object",
+                    "properties": {
+                      "id": {
+                        "type": "object",
+                        "properties": {
+                          "_extension": {
+                            "type": "string"
+                          },
+                          "_root": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "_extension",
+                          "_root"
+                        ]
+                      },
+                      "name": {
+                        "type": "string"
+                      },
+                      "assignedEntity": {
+                        "type": "object",
+                        "properties": {
+                          "assignedOrganization": {
+                            "type": "object",
+                            "properties": {
+                              "id": {
+                                "type": "object",
+                                "properties": {
+                                  "_extension": {
+                                    "type": "string"
+                                  },
+                                  "_root": {
+                                    "type": "string"
+                                  }
+                                },
+                                "required": [
+                                  "_extension",
+                                  "_root"
+                                ]
+                              },
+                              "name": {
+                                "type": "string"
+                              },
+                              "assignedEntity": {
+                                "type": "object",
+                                "properties": {
+                                  "assignedOrganization": {
+                                    "type": "object",
+                                    "properties": {
+                                      "id": {
+                                        "type": "object",
+                                        "properties": {
+                                          "_extension": {
+                                            "type": "string"
+                                          },
+                                          "_root": {
+                                            "type": "string"
+                                          }
+                                        },
+                                        "required": [
+                                          "_extension",
+                                          "_root"
+                                        ]
+                                      },
+                                      "name": {
+                                        "type": "string"
+                                      }
+                                    },
+                                    "required": [
+                                      "id",
+                                      "name"
+                                    ]
+                                  },
+                                  "performance": {
+                                    "type": "array",
+                                    "items": {
+                                      "type": "object",
+                                      "properties": {
+                                        "actDefinition": {
+                                          "type": "object",
+                                          "properties": {
+                                            "code": {
+                                              "type": "object",
+                                              "properties": {
+                                                "_code": {
+                                                  "type": "string"
+                                                },
+                                                "_codeSystem": {
+                                                  "type": "string"
+                                                },
+                                                "_displayName": {
+                                                  "type": "string"
+                                                }
+                                              },
+                                              "required": [
+                                                "_code",
+                                                "_codeSystem",
+                                                "_displayName"
+                                              ]
+                                            },
+                                            "product": {
+                                              "type": "object",
+                                              "properties": {
+                                                "manufacturedProduct": {
+                                                  "type": "object",
+                                                  "properties": {
+                                                    "manufacturedMaterialKind": {
+                                                      "type": "object",
+                                                      "properties": {
+                                                        "code": {
+                                                          "type": "object",
+                                                          "properties": {
+                                                            "_codeSystem": {
+                                                              "type": "string"
+                                                            },
+                                                            "_code": {
+                                                              "type": "string"
+                                                            }
+                                                          },
+                                                          "required": [
+                                                            "_codeSystem",
+                                                            "_code"
+                                                          ]
+                                                        }
+                                                      },
+                                                      "required": [
+                                                        "code"
+                                                      ]
+                                                    },
+                                                    "_classCode": {
+                                                      "type": "string"
+                                                    }
+                                                  },
+                                                  "required": [
+                                                    "manufacturedMaterialKind",
+                                                    "_classCode"
+                                                  ]
+                                                }
+                                              },
+                                              "required": [
+                                                "manufacturedProduct"
+                                              ]
+                                            }
+                                          },
+                                          "required": [
+                                            "code",
+                                            "product"
+                                          ]
+                                        }
+                                      },
+                                      "required": [
+                                        "actDefinition"
+                                      ]
+                                    }
+                                  }
+                                },
+                                "required": [
+                                  "assignedOrganization",
+                                  "performance"
+                                ]
+                              }
+                            },
+                            "required": [
+                              "id",
+                              "name",
+                              "assignedEntity"
+                            ]
+                          }
+                        },
+                        "required": [
+                          "assignedOrganization"
+                        ]
+                      }
+                    },
+                    "required": [
+                      "id",
+                      "name",
+                      "assignedEntity"
+                    ]
+                  }
+                },
+                "required": [
+                  "representedOrganization"
+                ]
+              }
+            },
+            "required": [
+              "time",
+              "assignedEntity"
+            ]
+          },
+          "component": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "structuredBody": {
+                  "type": "object",
+                  "properties": {
+                    "component": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "section": {
+                            "type": "object",
+                            "properties": {
+                              "id": {
+                                "type": "object",
+                                "properties": {
+                                  "_root": {
+                                    "type": "string"
+                                  }
+                                },
+                                "required": [
+                                  "_root"
+                                ]
+                              },
+                              "code": {
+                                "type": "object",
+                                "properties": {
+                                  "_code": {
+                                    "type": "string"
+                                  },
+                                  "_codeSystem": {
+                                    "type": "string"
+                                  },
+                                  "_displayName": {
+                                    "type": "string"
+                                  }
+                                },
+                                "required": [
+                                  "_code",
+                                  "_codeSystem",
+                                  "_displayName"
+                                ]
+                              },
+                              "effectiveTime": {
+                                "type": "object",
+                                "properties": {
+                                  "_value": {
+                                    "type": "string"
+                                  }
+                                },
+                                "required": [
+                                  "_value"
+                                ]
+                              },
+                              "subject": {
+                                "type": "object",
+                                "properties": {
+                                  "manufacturedProduct": {
+                                    "type": "object",
+                                    "properties": {
+                                      "manufacturedProduct": {
+                                        "type": "object",
+                                        "properties": {
+                                          "code": {
+                                            "type": "object",
+                                            "properties": {
+                                              "_code": {
+                                                "type": "string"
+                                              },
+                                              "_codeSystem": {
+                                                "type": "string"
+                                              }
+                                            },
+                                            "required": [
+                                              "_code",
+                                              "_codeSystem"
+                                            ]
+                                          },
+                                          "name": {
+                                            "type": "string"
+                                          },
+                                          "formCode": {
+                                            "type": "object",
+                                            "properties": {
+                                              "_code": {
+                                                "type": "string"
+                                              },
+                                              "_codeSystem": {
+                                                "type": "string"
+                                              },
+                                              "_displayName": {
+                                                "type": "string"
+                                              }
+                                            },
+                                            "required": [
+                                              "_code",
+                                              "_codeSystem",
+                                              "_displayName"
+                                            ]
+                                          },
+                                          "asEntityWithGeneric": {
+                                            "type": "object",
+                                            "properties": {
+                                              "genericMedicine": {
+                                                "type": "object",
+                                                "properties": {
+                                                  "name": {
+                                                    "type": "string"
+                                                  }
+                                                },
+                                                "required": [
+                                                  "name"
+                                                ]
+                                              }
+                                            },
+                                            "required": [
+                                              "genericMedicine"
+                                            ]
+                                          },
+                                          "asEquivalentEntity": {
+                                            "type": "object",
+                                            "properties": {
+                                              "code": {
+                                                "type": "object",
+                                                "properties": {
+                                                  "_code": {
+                                                    "type": "string"
+                                                  },
+                                                  "_codeSystem": {
+                                                    "type": "string"
+                                                  }
+                                                },
+                                                "required": [
+                                                  "_code",
+                                                  "_codeSystem"
+                                                ]
+                                              },
+                                              "definingMaterialKind": {
+                                                "type": "object",
+                                                "properties": {
+                                                  "code": {
+                                                    "type": "object",
+                                                    "properties": {
+                                                      "_code": {
+                                                        "type": "string"
+                                                      },
+                                                      "_codeSystem": {
+                                                        "type": "string"
+                                                      }
+                                                    },
+                                                    "required": [
+                                                      "_code",
+                                                      "_codeSystem"
+                                                    ]
+                                                  }
+                                                },
+                                                "required": [
+                                                  "code"
+                                                ]
+                                              },
+                                              "_classCode": {
+                                                "type": "string"
+                                              }
+                                            },
+                                            "required": [
+                                              "code",
+                                              "definingMaterialKind",
+                                              "_classCode"
+                                            ]
+                                          },
+                                          "ingredient": {
+                                            "type": "array",
+                                            "items": {
+                                              "type": "object",
+                                              "properties": {
+                                                "quantity": {
+                                                  "type": "object",
+                                                  "properties": {
+                                                    "numerator": {
+                                                      "type": "object",
+                                                      "properties": {
+                                                        "_value": {
+                                                          "type": "string"
+                                                        },
+                                                        "_unit": {
+                                                          "type": "string"
+                                                        }
+                                                      },
+                                                      "required": [
+                                                        "_value",
+                                                        "_unit"
+                                                      ]
+                                                    },
+                                                    "denominator": {
+                                                      "type": "object",
+                                                      "properties": {
+                                                        "_value": {
+                                                          "type": "string"
+                                                        },
+                                                        "_unit": {
+                                                          "type": "string"
+                                                        }
+                                                      },
+                                                      "required": [
+                                                        "_value",
+                                                        "_unit"
+                                                      ]
+                                                    }
+                                                  },
+                                                  "required": [
+                                                    "numerator",
+                                                    "denominator"
+                                                  ]
+                                                },
+                                                "ingredientSubstance": {
+                                                  "type": "object",
+                                                  "properties": {
+                                                    "code": {
+                                                      "type": "object",
+                                                      "properties": {
+                                                        "_code": {
+                                                          "type": "string"
+                                                        },
+                                                        "_codeSystem": {
+                                                          "type": "string"
+                                                        }
+                                                      },
+                                                      "required": [
+                                                        "_code",
+                                                        "_codeSystem"
+                                                      ]
+                                                    },
+                                                    "name": {
+                                                      "type": "string"
+                                                    },
+                                                    "activeMoiety": {
+                                                      "type": "object",
+                                                      "properties": {
+                                                        "activeMoiety": {
+                                                          "type": "object",
+                                                          "properties": {
+                                                            "code": {
+                                                              "type": "object",
+                                                              "properties": {
+                                                                "_code": {
+                                                                  "type": "string"
+                                                                },
+                                                                "_codeSystem": {
+                                                                  "type": "string"
+                                                                }
+                                                              },
+                                                              "required": [
+                                                                "_code",
+                                                                "_codeSystem"
+                                                              ]
+                                                            },
+                                                            "name": {
+                                                              "type": "string"
+                                                            }
+                                                          },
+                                                          "required": [
+                                                            "code",
+                                                            "name"
+                                                          ]
+                                                        }
+                                                      },
+                                                      "required": [
+                                                        "activeMoiety"
+                                                      ]
+                                                    }
+                                                  },
+                                                  "required": [
+                                                    "code",
+                                                    "name"
+                                                  ]
+                                                },
+                                                "_classCode": {
+                                                  "type": "string"
+                                                }
+                                              },
+                                              "required": [
+                                                "ingredientSubstance",
+                                                "_classCode"
+                                              ]
+                                            }
+                                          },
+                                          "asContent": {
+                                            "type": "array",
+                                            "items": {
+                                              "type": "object",
+                                              "properties": {
+                                                "quantity": {
+                                                  "type": "object",
+                                                  "properties": {
+                                                    "numerator": {
+                                                      "type": "object",
+                                                      "properties": {
+                                                        "_value": {
+                                                          "type": "string"
+                                                        },
+                                                        "_unit": {
+                                                          "type": "string"
+                                                        }
+                                                      },
+                                                      "required": [
+                                                        "_value",
+                                                        "_unit"
+                                                      ]
+                                                    },
+                                                    "denominator": {
+                                                      "type": "object",
+                                                      "properties": {
+                                                        "_value": {
+                                                          "type": "string"
+                                                        }
+                                                      },
+                                                      "required": [
+                                                        "_value"
+                                                      ]
+                                                    }
+                                                  },
+                                                  "required": [
+                                                    "numerator",
+                                                    "denominator"
+                                                  ]
+                                                },
+                                                "containerPackagedProduct": {
+                                                  "type": "object",
+                                                  "properties": {
+                                                    "code": {
+                                                      "type": "object",
+                                                      "properties": {
+                                                        "_code": {
+                                                          "type": "string"
+                                                        },
+                                                        "_codeSystem": {
+                                                          "type": "string"
+                                                        }
+                                                      },
+                                                      "required": [
+                                                        "_code",
+                                                        "_codeSystem"
+                                                      ]
+                                                    },
+                                                    "formCode": {
+                                                      "type": "object",
+                                                      "properties": {
+                                                        "_code": {
+                                                          "type": "string"
+                                                        },
+                                                        "_codeSystem": {
+                                                          "type": "string"
+                                                        },
+                                                        "_displayName": {
+                                                          "type": "string"
+                                                        }
+                                                      },
+                                                      "required": [
+                                                        "_code",
+                                                        "_codeSystem",
+                                                        "_displayName"
+                                                      ]
+                                                    }
+                                                  },
+                                                  "required": [
+                                                    "code",
+                                                    "formCode"
+                                                  ]
+                                                },
+                                                "subjectOf": {
+                                                  "type": "array",
+                                                  "items": {
+                                                    "type": "object",
+                                                    "properties": {
+                                                      "characteristic": {
+                                                        "type": "object",
+                                                        "properties": {
+                                                          "code": {
+                                                            "type": "object",
+                                                            "properties": {
+                                                              "_code": {
+                                                                "type": "string"
+                                                              },
+                                                              "_codeSystem": {
+                                                                "type": "string"
+                                                              }
+                                                            },
+                                                            "required": [
+                                                              "_code",
+                                                              "_codeSystem"
+                                                            ]
+                                                          },
+                                                          "value": {
+                                                            "type": "object",
+                                                            "properties": {
+                                                              "_code": {
+                                                                "type": "string"
+                                                              },
+                                                              "_displayName": {
+                                                                "type": "string"
+                                                              },
+                                                              "_codeSystem": {
+                                                                "type": "string"
+                                                              },
+                                                              "_xsi:type": {
+                                                                "type": "string"
+                                                              }
+                                                            },
+                                                            "required": [
+                                                              "_code",
+                                                              "_displayName",
+                                                              "_codeSystem",
+                                                              "_xsi:type"
+                                                            ]
+                                                          }
+                                                        },
+                                                        "required": [
+                                                          "code",
+                                                          "value"
+                                                        ]
+                                                      },
+                                                      "marketingAct": {
+                                                        "type": "object",
+                                                        "properties": {
+                                                          "code": {
+                                                            "type": "object",
+                                                            "properties": {
+                                                              "_code": {
+                                                                "type": "string"
+                                                              },
+                                                              "_codeSystem": {
+                                                                "type": "string"
+                                                              }
+                                                            },
+                                                            "required": [
+                                                              "_code",
+                                                              "_codeSystem"
+                                                            ]
+                                                          },
+                                                          "statusCode": {
+                                                            "type": "object",
+                                                            "properties": {
+                                                              "_code": {
+                                                                "type": "string"
+                                                              }
+                                                            },
+                                                            "required": [
+                                                              "_code"
+                                                            ]
+                                                          },
+                                                          "effectiveTime": {
+                                                            "type": "object",
+                                                            "properties": {
+                                                              "low": {
+                                                                "type": "object",
+                                                                "properties": {
+                                                                  "_value": {
+                                                                    "type": "string"
+                                                                  }
+                                                                },
+                                                                "required": [
+                                                                  "_value"
+                                                                ]
+                                                              }
+                                                            },
+                                                            "required": [
+                                                              "low"
+                                                            ]
+                                                          }
+                                                        },
+                                                        "required": [
+                                                          "code",
+                                                          "statusCode",
+                                                          "effectiveTime"
+                                                        ]
+                                                      }
+                                                    },
+                                                    "required": []
+                                                  }
+                                                }
+                                              },
+                                              "required": [
+                                                "quantity",
+                                                "containerPackagedProduct",
+                                                "subjectOf"
+                                              ]
+                                            }
+                                          }
+                                        },
+                                        "required": [
+                                          "code",
+                                          "name",
+                                          "formCode",
+                                          "asEntityWithGeneric",
+                                          "asEquivalentEntity",
+                                          "ingredient",
+                                          "asContent"
+                                        ]
+                                      },
+                                      "subjectOf": {
+                                        "type": "array",
+                                        "items": {
+                                          "type": "object",
+                                          "properties": {
+                                            "approval": {
+                                              "type": "object",
+                                              "properties": {
+                                                "id": {
+                                                  "type": "object",
+                                                  "properties": {
+                                                    "_extension": {
+                                                      "type": "string"
+                                                    },
+                                                    "_root": {
+                                                      "type": "string"
+                                                    }
+                                                  },
+                                                  "required": [
+                                                    "_extension",
+                                                    "_root"
+                                                  ]
+                                                },
+                                                "code": {
+                                                  "type": "object",
+                                                  "properties": {
+                                                    "_code": {
+                                                      "type": "string"
+                                                    },
+                                                    "_codeSystem": {
+                                                      "type": "string"
+                                                    },
+                                                    "_displayName": {
+                                                      "type": "string"
+                                                    }
+                                                  },
+                                                  "required": [
+                                                    "_code",
+                                                    "_codeSystem",
+                                                    "_displayName"
+                                                  ]
+                                                },
+                                                "author": {
+                                                  "type": "object",
+                                                  "properties": {
+                                                    "territorialAuthority": {
+                                                      "type": "object",
+                                                      "properties": {
+                                                        "territory": {
+                                                          "type": "object",
+                                                          "properties": {
+                                                            "code": {
+                                                              "type": "object",
+                                                              "properties": {
+                                                                "_code": {
+                                                                  "type": "string"
+                                                                },
+                                                                "_codeSystem": {
+                                                                  "type": "string"
+                                                                }
+                                                              },
+                                                              "required": [
+                                                                "_code",
+                                                                "_codeSystem"
+                                                              ]
+                                                            }
+                                                          },
+                                                          "required": [
+                                                            "code"
+                                                          ]
+                                                        }
+                                                      },
+                                                      "required": [
+                                                        "territory"
+                                                      ]
+                                                    }
+                                                  },
+                                                  "required": [
+                                                    "territorialAuthority"
+                                                  ]
+                                                }
+                                              },
+                                              "required": [
+                                                "id",
+                                                "code",
+                                                "author"
+                                              ]
+                                            },
+                                            "marketingAct": {
+                                              "type": "object",
+                                              "properties": {
+                                                "code": {
+                                                  "type": "object",
+                                                  "properties": {
+                                                    "_code": {
+                                                      "type": "string"
+                                                    },
+                                                    "_codeSystem": {
+                                                      "type": "string"
+                                                    }
+                                                  },
+                                                  "required": [
+                                                    "_code",
+                                                    "_codeSystem"
+                                                  ]
+                                                },
+                                                "statusCode": {
+                                                  "type": "object",
+                                                  "properties": {
+                                                    "_code": {
+                                                      "type": "string"
+                                                    }
+                                                  },
+                                                  "required": [
+                                                    "_code"
+                                                  ]
+                                                },
+                                                "effectiveTime": {
+                                                  "type": "object",
+                                                  "properties": {
+                                                    "low": {
+                                                      "type": "object",
+                                                      "properties": {
+                                                        "_value": {
+                                                          "type": "string"
+                                                        }
+                                                      },
+                                                      "required": [
+                                                        "_value"
+                                                      ]
+                                                    }
+                                                  },
+                                                  "required": [
+                                                    "low"
+                                                  ]
+                                                }
+                                              },
+                                              "required": [
+                                                "code",
+                                                "statusCode",
+                                                "effectiveTime"
+                                              ]
+                                            },
+                                            "characteristic": {
+                                              "type": "object",
+                                              "properties": {
+                                                "code": {
+                                                  "type": "object",
+                                                  "properties": {
+                                                    "_code": {
+                                                      "type": "string"
+                                                    },
+                                                    "_codeSystem": {
+                                                      "type": "string"
+                                                    }
+                                                  },
+                                                  "required": [
+                                                    "_code",
+                                                    "_codeSystem"
+                                                  ]
+                                                },
+                                                "value": {
+                                                  "type": "object",
+                                                  "properties": {
+                                                    "_xsi:type": {
+                                                      "type": "string"
+                                                    },
+                                                    "__text": {
+                                                      "type": "string"
+                                                    },
+                                                    "_value": {
+                                                      "type": "string"
+                                                    },
+                                                    "_unit": {
+                                                      "type": "string"
+                                                    },
+                                                    "_code": {
+                                                      "type": "string"
+                                                    },
+                                                    "_codeSystem": {
+                                                      "type": "string"
+                                                    },
+                                                    "_displayName": {
+                                                      "type": "string"
+                                                    }
+                                                  },
+                                                  "required": [
+                                                    "_xsi:type"
+                                                  ]
+                                                },
+                                                "_classCode": {
+                                                  "type": "string"
+                                                }
+                                              },
+                                              "required": [
+                                                "code",
+                                                "value",
+                                                "_classCode"
+                                              ]
+                                            },
+                                            "policy": {
+                                              "type": "object",
+                                              "properties": {
+                                                "code": {
+                                                  "type": "object",
+                                                  "properties": {
+                                                    "_code": {
+                                                      "type": "string"
+                                                    },
+                                                    "_displayName": {
+                                                      "type": "string"
+                                                    },
+                                                    "_codeSystem": {
+                                                      "type": "string"
+                                                    }
+                                                  },
+                                                  "required": [
+                                                    "_code",
+                                                    "_displayName",
+                                                    "_codeSystem"
+                                                  ]
+                                                },
+                                                "_classCode": {
+                                                  "type": "string"
+                                                }
+                                              },
+                                              "required": [
+                                                "code",
+                                                "_classCode"
+                                              ]
+                                            }
+                                          },
+                                          "required": []
+                                        }
+                                      },
+                                      "consumedIn": {
+                                        "type": "object",
+                                        "properties": {
+                                          "substanceAdministration": {
+                                            "type": "object",
+                                            "properties": {
+                                              "routeCode": {
+                                                "type": "object",
+                                                "properties": {
+                                                  "_code": {
+                                                    "type": "string"
+                                                  },
+                                                  "_codeSystem": {
+                                                    "type": "string"
+                                                  },
+                                                  "_displayName": {
+                                                    "type": "string"
+                                                  }
+                                                },
+                                                "required": [
+                                                  "_code",
+                                                  "_codeSystem",
+                                                  "_displayName"
+                                                ]
+                                              }
+                                            },
+                                            "required": [
+                                              "routeCode"
+                                            ]
+                                          }
+                                        },
+                                        "required": [
+                                          "substanceAdministration"
+                                        ]
+                                      }
+                                    },
+                                    "required": [
+                                      "manufacturedProduct",
+                                      "subjectOf",
+                                      "consumedIn"
+                                    ]
+                                  }
+                                },
+                                "required": [
+                                  "manufacturedProduct"
+                                ]
+                              },
+                              "component": {
+                                "type": "array",
+                                "items": {
+                                  "type": "object",
+                                  "properties": {
+                                    "observationMedia": {
+                                      "type": "object",
+                                      "properties": {
+                                        "text": {
+                                          "type": "string"
+                                        },
+                                        "value": {
+                                          "type": "object",
+                                          "properties": {
+                                            "reference": {
+                                              "type": "object",
+                                              "properties": {
+                                                "_value": {
+                                                  "type": "string"
+                                                }
+                                              },
+                                              "required": [
+                                                "_value"
+                                              ]
+                                            },
+                                            "_xsi:type": {
+                                              "type": "string"
+                                            },
+                                            "_mediaType": {
+                                              "type": "string"
+                                            }
+                                          },
+                                          "required": [
+                                            "reference",
+                                            "_xsi:type",
+                                            "_mediaType"
+                                          ]
+                                        },
+                                        "_ID": {
+                                          "type": "string"
+                                        }
+                                      },
+                                      "required": [
+                                        "text",
+                                        "value",
+                                        "_ID"
+                                      ]
+                                    },
+                                    "section": {
+                                      "type": "object",
+                                      "properties": {
+                                        "id": {
+                                          "type": "object",
+                                          "properties": {
+                                            "_root": {
+                                              "type": "string"
+                                            }
+                                          },
+                                          "required": [
+                                            "_root"
+                                          ]
+                                        },
+                                        "code": {
+                                          "type": "object",
+                                          "properties": {
+                                            "_code": {
+                                              "type": "string"
+                                            },
+                                            "_codeSystem": {
+                                              "type": "string"
+                                            },
+                                            "_displayName": {
+                                              "type": "string"
+                                            }
+                                          },
+                                          "required": [
+                                            "_code",
+                                            "_codeSystem",
+                                            "_displayName"
+                                          ]
+                                        },
+                                        "title": {
+                                          "type": "string"
+                                        },
+                                        "text": {
+                                          "type": "object",
+                                          "properties": {
+                                            "paragraph": {
+                                              "type": "array",
+                                              "items": {}
+                                            },
+                                            "br": {
+                                              "type": "array",
+                                              "items": {}
+                                            },
+                                            "content": {
+                                              "type": "array",
+                                              "items": {
+                                                "type": "object",
+                                                "properties": {
+                                                  "br": {
+                                                    "type": "array",
+                                                    "items": {}
+                                                  },
+                                                  "_styleCode": {
+                                                    "type": "string"
+                                                  }
+                                                },
+                                                "required": [
+                                                  "br",
+                                                  "_styleCode"
+                                                ]
+                                              }
+                                            }
+                                          },
+                                          "required": [
+                                            "paragraph"
+                                          ]
+                                        },
+                                        "effectiveTime": {
+                                          "type": "object",
+                                          "properties": {
+                                            "_value": {
+                                              "type": "string"
+                                            }
+                                          },
+                                          "required": [
+                                            "_value"
+                                          ]
+                                        },
+                                        "_ID": {
+                                          "type": "string"
+                                        }
+                                      },
+                                      "required": [
+                                        "id",
+                                        "code",
+                                        "title",
+                                        "text",
+                                        "effectiveTime",
+                                        "_ID"
+                                      ]
+                                    }
+                                  },
+                                  "required": []
+                                }
+                              },
+                              "text": {
+                                "type": "object",
+                                "properties": {
+                                  "paragraph": {
+                                    "type": "array",
+                                    "items": {}
+                                  },
+                                  "renderMultiMedia": {
+                                    "type": "array",
+                                    "items": {
+                                      "type": "object",
+                                      "properties": {
+                                        "_ID": {
+                                          "type": "string"
+                                        },
+                                        "_referencedObject": {
+                                          "type": "string"
+                                        }
+                                      },
+                                      "required": [
+                                        "_referencedObject"
+                                      ]
+                                    }
+                                  },
+                                  "br": {
+                                    "type": "array",
+                                    "items": {}
+                                  },
+                                  "table": {
+                                    "type": "object",
+                                    "properties": {
+                                      "tbody": {
+                                        "type": "object",
+                                        "properties": {
+                                          "tr": {
+                                            "type": "array",
+                                            "items": {
+                                              "type": "object",
+                                              "properties": {
+                                                "td": {
+                                                  "type": "array",
+                                                  "items": {
+                                                    "type": "object",
+                                                    "properties": {
+                                                      "content": {
+                                                        "type": "array",
+                                                        "items": {
+                                                          "type": "object",
+                                                          "properties": {
+                                                            "_styleCode": {
+                                                              "type": "string"
+                                                            },
+                                                            "__text": {
+                                                              "type": "string"
+                                                            },
+                                                            "br": {
+                                                              "type": "array",
+                                                              "items": {}
+                                                            }
+                                                          },
+                                                          "required": [
+                                                            "_styleCode",
+                                                            "__text"
+                                                          ]
+                                                        }
+                                                      },
+                                                      "_styleCode": {
+                                                        "type": "string"
+                                                      },
+                                                      "_valign": {
+                                                        "type": "string"
+                                                      },
+                                                      "br": {
+                                                        "type": "array",
+                                                        "items": {}
+                                                      },
+                                                      "__text": {
+                                                        "type": "string"
+                                                      },
+                                                      "_align": {
+                                                        "type": "string"
+                                                      }
+                                                    },
+                                                    "required": [
+                                                      "_styleCode",
+                                                      "_valign"
+                                                    ]
+                                                  }
+                                                },
+                                                "_styleCode": {
+                                                  "type": "string"
+                                                }
+                                              },
+                                              "required": [
+                                                "td"
+                                              ]
+                                            }
+                                          }
+                                        },
+                                        "required": [
+                                          "tr"
+                                        ]
+                                      },
+                                      "_cellspacing": {
+                                        "type": "string"
+                                      },
+                                      "_cellpadding": {
+                                        "type": "string"
+                                      },
+                                      "_border": {
+                                        "type": "string"
+                                      }
+                                    },
+                                    "required": [
+                                      "tbody",
+                                      "_cellspacing",
+                                      "_cellpadding",
+                                      "_border"
+                                    ]
+                                  },
+                                  "content": {
+                                    "type": "array",
+                                    "items": {
+                                      "type": "object",
+                                      "properties": {
+                                        "br": {
+                                          "type": "array",
+                                          "items": {}
+                                        },
+                                        "_styleCode": {
+                                          "type": "string"
+                                        }
+                                      },
+                                      "required": [
+                                        "br",
+                                        "_styleCode"
+                                      ]
+                                    }
+                                  },
+                                  "list": {
+                                    "type": "object",
+                                    "properties": {
+                                      "item": {
+                                        "type": "array",
+                                        "items": {
+                                          "type": "string"
+                                        }
+                                      },
+                                      "_listType": {
+                                        "type": "string"
+                                      },
+                                      "_styleCode": {
+                                        "type": "string"
+                                      }
+                                    },
+                                    "required": [
+                                      "item",
+                                      "_listType",
+                                      "_styleCode"
+                                    ]
+                                  }
+                                },
+                                "required": [
+                                  "paragraph"
+                                ]
+                              },
+                              "_ID": {
+                                "type": "string"
+                              },
+                              "title": {
+                                "type": "string"
+                              }
+                            },
+                            "required": [
+                              "id",
+                              "code",
+                              "effectiveTime"
+                            ]
+                          }
+                        },
+                        "required": [
+                          "section"
+                        ]
+                      }
+                    }
+                  },
+                  "required": [
+                    "component"
+                  ]
+                }
+              },
+              "required": [
+                "structuredBody"
+              ]
+            }
+          },
+          "_xmlns": {
+            "type": "string"
+          },
+          "_xmlns:xsi": {
+            "type": "string"
+          },
+          "_xsi:schemaLocation": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "code",
+          "title",
+          "effectiveTime",
+          "setId",
+          "versionNumber",
+          "author",
+          "component",
+          "_xmlns",
+          "_xmlns:xsi",
+          "_xsi:schemaLocation"
+        ]
+      }
+    },
+    "required": [
+      "document"
+    ]
+  }

@@ -1,0 +1,3237 @@
+{
+    "$schema": "http://json-schema.org/draft-06/schema#",
+    "$ref": "#/definitions/Welcome9",
+    "definitions": {
+        "Welcome9": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "document": {
+                    "$ref": "#/definitions/Document"
+                }
+            },
+            "required": [
+                "document"
+            ],
+            "title": "Welcome9"
+        },
+        "Document": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "id": {
+                    "$ref": "#/definitions/SetIDClass"
+                },
+                "code": {
+                    "$ref": "#/definitions/FormCodeClass"
+                },
+                "title": {
+                    "$ref": "#/definitions/TitleClass"
+                },
+                "effectiveTime": {
+                    "$ref": "#/definitions/EffectiveTime"
+                },
+                "setId": {
+                    "$ref": "#/definitions/SetIDClass"
+                },
+                "versionNumber": {
+                    "$ref": "#/definitions/EffectiveTime"
+                },
+                "author": {
+                    "$ref": "#/definitions/DocumentAuthor"
+                },
+                "component": {
+                    "$ref": "#/definitions/DocumentComponent"
+                },
+                "_xmlns": {
+                    "type": "string"
+                },
+                "_xmlns:xsi": {
+                    "type": "string",
+                    "format": "uri",
+                    "qt-uri-protocols": [
+                        "http"
+                    ]
+                },
+                "_xsi:schemaLocation": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "_xmlns",
+                "_xmlns:xsi",
+                "_xsi:schemaLocation",
+                "author",
+                "code",
+                "component",
+                "effectiveTime",
+                "id",
+                "setId",
+                "title",
+                "versionNumber"
+            ],
+            "title": "Document"
+        },
+        "DocumentAuthor": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "time": {
+                    "type": "string"
+                },
+                "assignedEntity": {
+                    "$ref": "#/definitions/AssignedEntity"
+                }
+            },
+            "required": [
+                "assignedEntity",
+                "time"
+            ],
+            "title": "DocumentAuthor"
+        },
+        "AssignedEntity": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "representedOrganization": {
+                    "$ref": "#/definitions/RepresentedOrganization"
+                }
+            },
+            "required": [
+                "representedOrganization"
+            ],
+            "title": "AssignedEntity"
+        },
+        "RepresentedOrganization": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "id": {
+                    "$ref": "#/definitions/RepresentedOrganizationID"
+                },
+                "name": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "id",
+                "name"
+            ],
+            "title": "RepresentedOrganization"
+        },
+        "RepresentedOrganizationID": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "_extension": {
+                    "type": "string"
+                },
+                "_root": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "_extension",
+                "_root"
+            ],
+            "title": "RepresentedOrganizationID"
+        },
+        "FormCodeClass": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "_code": {
+                    "type": "string"
+                },
+                "_codeSystem": {
+                    "$ref": "#/definitions/FormCodeCodeSystem"
+                },
+                "_displayName": {
+                    "type": "string"
+                },
+                "_xsi:type": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "_code",
+                "_codeSystem",
+                "_displayName"
+            ],
+            "title": "FormCodeClass"
+        },
+        "DocumentComponent": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "structuredBody": {
+                    "$ref": "#/definitions/StructuredBody"
+                }
+            },
+            "required": [
+                "structuredBody"
+            ],
+            "title": "DocumentComponent"
+        },
+        "StructuredBody": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "component": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/StructuredBodyComponent"
+                    }
+                }
+            },
+            "required": [
+                "component"
+            ],
+            "title": "StructuredBody"
+        },
+        "StructuredBodyComponent": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "section": {
+                    "$ref": "#/definitions/PurpleSection"
+                }
+            },
+            "required": [
+                "section"
+            ],
+            "title": "StructuredBodyComponent"
+        },
+        "PurpleSection": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "id": {
+                    "$ref": "#/definitions/SetIDClass"
+                },
+                "code": {
+                    "$ref": "#/definitions/FormCodeClass"
+                },
+                "effectiveTime": {
+                    "$ref": "#/definitions/EffectiveTime"
+                },
+                "subject": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/Subject"
+                    }
+                },
+                "excerpt": {
+                    "$ref": "#/definitions/Excerpt"
+                },
+                "_ID": {
+                    "type": "string"
+                },
+                "title": {
+                    "$ref": "#/definitions/TitleUnion"
+                },
+                "text": {
+                    "$ref": "#/definitions/MagentaText"
+                },
+                "component": {
+                    "$ref": "#/definitions/CunningComponent"
+                }
+            },
+            "required": [
+                "code",
+                "effectiveTime",
+                "id"
+            ],
+            "title": "PurpleSection"
+        },
+        "PurpleComponent": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "section": {
+                    "$ref": "#/definitions/FluffySection"
+                }
+            },
+            "required": [
+                "section"
+            ],
+            "title": "PurpleComponent"
+        },
+        "AmbitiousComponent": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "section": {
+                    "$ref": "#/definitions/CunningSection"
+                },
+                "observationMedia": {
+                    "$ref": "#/definitions/ObservationMedia"
+                }
+            },
+            "required": [],
+            "title": "AmbitiousComponent"
+        },
+        "FluffySection": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "id": {
+                    "$ref": "#/definitions/SetIDClass"
+                },
+                "code": {
+                    "$ref": "#/definitions/FormCodeClass"
+                },
+                "title": {
+                    "type": "string"
+                },
+                "text": {
+                    "$ref": "#/definitions/HilariousText"
+                },
+                "effectiveTime": {
+                    "$ref": "#/definitions/EffectiveTime"
+                },
+                "_ID": {
+                    "type": "string"
+                },
+                "component": {
+                    "$ref": "#/definitions/MagentaComponent"
+                }
+            },
+            "required": [
+                "_ID",
+                "code",
+                "effectiveTime",
+                "id"
+            ],
+            "title": "FluffySection"
+        },
+        "FluffyComponent": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "section": {
+                    "$ref": "#/definitions/TentacledSection"
+                }
+            },
+            "required": [
+                "section"
+            ],
+            "title": "FluffyComponent"
+        },
+        "HilariousComponent": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "section": {
+                    "$ref": "#/definitions/AmbitiousSection"
+                }
+            },
+            "required": [
+                "section"
+            ],
+            "title": "HilariousComponent"
+        },
+        "TentacledSection": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "id": {
+                    "$ref": "#/definitions/SetIDClass"
+                },
+                "code": {
+                    "$ref": "#/definitions/FormCodeClass"
+                },
+                "text": {
+                    "$ref": "#/definitions/IndigoText"
+                },
+                "effectiveTime": {
+                    "$ref": "#/definitions/EffectiveTime"
+                },
+                "component": {
+                    "$ref": "#/definitions/FriskyComponent"
+                },
+                "_ID": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "_ID",
+                "code",
+                "effectiveTime",
+                "id",
+                "text"
+            ],
+            "title": "TentacledSection"
+        },
+        "TentacledComponent": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "section": {
+                    "$ref": "#/definitions/StickySection"
+                }
+            },
+            "required": [
+                "section"
+            ],
+            "title": "TentacledComponent"
+        },
+        "IndecentComponent": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "section": {
+                    "$ref": "#/definitions/HilariousSection"
+                }
+            },
+            "required": [
+                "section"
+            ],
+            "title": "IndecentComponent"
+        },
+        "StickySection": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "id": {
+                    "$ref": "#/definitions/SetIDClass"
+                },
+                "code": {
+                    "$ref": "#/definitions/FormCodeClass"
+                },
+                "text": {
+                    "$ref": "#/definitions/TentacledText"
+                },
+                "effectiveTime": {
+                    "$ref": "#/definitions/EffectiveTime"
+                },
+                "_ID": {
+                    "type": "string"
+                },
+                "component": {
+                    "$ref": "#/definitions/MischievousComponent"
+                }
+            },
+            "required": [
+                "_ID",
+                "code",
+                "effectiveTime",
+                "id",
+                "text"
+            ],
+            "title": "StickySection"
+        },
+        "StickyComponent": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "section": {
+                    "$ref": "#/definitions/IndigoSection"
+                }
+            },
+            "required": [
+                "section"
+            ],
+            "title": "StickyComponent"
+        },
+        "IndigoComponent": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "section": {
+                    "$ref": "#/definitions/IndecentSection"
+                }
+            },
+            "required": [
+                "section"
+            ],
+            "title": "IndigoComponent"
+        },
+        "IndigoSection": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "id": {
+                    "$ref": "#/definitions/SetIDClass"
+                },
+                "code": {
+                    "$ref": "#/definitions/FormCodeClass"
+                },
+                "text": {
+                    "$ref": "#/definitions/PurpleText"
+                },
+                "effectiveTime": {
+                    "$ref": "#/definitions/EffectiveTime"
+                },
+                "_ID": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "_ID",
+                "code",
+                "effectiveTime",
+                "id",
+                "text"
+            ],
+            "title": "IndigoSection"
+        },
+        "EffectiveTime": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "_value": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "_value"
+            ],
+            "title": "EffectiveTime"
+        },
+        "SetIDClass": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "_root": {
+                    "type": "string",
+                    "format": "uuid"
+                }
+            },
+            "required": [
+                "_root"
+            ],
+            "title": "SetIDClass"
+        },
+        "PurpleText": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "paragraph": {
+                    "$ref": "#/definitions/Paragraph7"
+                },
+                "table": {
+                    "$ref": "#/definitions/PurpleTable"
+                }
+            },
+            "required": [
+                "paragraph"
+            ],
+            "title": "PurpleText"
+        },
+        "PurpleParagraph": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "content": {
+                    "$ref": "#/definitions/PurpleContent"
+                },
+                "linkHtml": {
+                    "$ref": "#/definitions/LinkHTMLUnion"
+                },
+                "__text": {
+                    "type": "string"
+                }
+            },
+            "required": [],
+            "title": "PurpleParagraph"
+        },
+        "FluffyParagraph": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "sub": {
+                    "$ref": "#/definitions/Br"
+                },
+                "__text": {
+                    "type": "string"
+                },
+                "content": {
+                    "$ref": "#/definitions/FluffyContent"
+                }
+            },
+            "required": [
+                "__text",
+                "sub"
+            ],
+            "title": "FluffyParagraph"
+        },
+        "LinkHTMLElement": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "_href": {
+                    "type": "string",
+                    "qt-uri-protocols": [
+                        "http",
+                        "https"
+                    ],
+                    "qt-uri-extensions": [
+                        ".pdf"
+                    ]
+                },
+                "__text": {
+                    "type": "string",
+                    "qt-uri-protocols": [
+                        "https"
+                    ]
+                }
+            },
+            "required": [
+                "__text",
+                "_href"
+            ],
+            "title": "LinkHTMLElement"
+        },
+        "PurpleTable": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "caption": {
+                    "type": "string"
+                },
+                "col": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/Col"
+                    }
+                },
+                "tfoot": {
+                    "$ref": "#/definitions/Tfoot"
+                },
+                "tbody": {
+                    "$ref": "#/definitions/PurpleTbody"
+                },
+                "_ID": {
+                    "type": "string"
+                },
+                "_width": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "_ID",
+                "_width",
+                "caption",
+                "col",
+                "tbody",
+                "tfoot"
+            ],
+            "title": "PurpleTable"
+        },
+        "Col": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "_width": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "_width"
+            ],
+            "title": "Col"
+        },
+        "PurpleTbody": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "tr": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/PurpleTr"
+                    }
+                }
+            },
+            "required": [
+                "tr"
+            ],
+            "title": "PurpleTbody"
+        },
+        "PurpleTr": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "td": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/PurpleTd"
+                    }
+                }
+            },
+            "required": [
+                "td"
+            ],
+            "title": "PurpleTr"
+        },
+        "PurpleTd": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "paragraph": {
+                    "$ref": "#/definitions/Paragraph9"
+                },
+                "_styleCode": {
+                    "$ref": "#/definitions/PurpleStyleCode"
+                },
+                "_valign": {
+                    "$ref": "#/definitions/Valign"
+                },
+                "_align": {
+                    "$ref": "#/definitions/Align"
+                },
+                "list": {
+                    "$ref": "#/definitions/TdList"
+                }
+            },
+            "required": [
+                "_styleCode",
+                "_valign"
+            ],
+            "title": "PurpleTd"
+        },
+        "TdList": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "item": {
+                    "$ref": "#/definitions/ListItemClass"
+                },
+                "_listType": {
+                    "$ref": "#/definitions/ListType"
+                }
+            },
+            "required": [
+                "_listType",
+                "item"
+            ],
+            "title": "TdList"
+        },
+        "TentacledParagraph": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "content": {
+                    "$ref": "#/definitions/AmbitiousContent"
+                },
+                "br": {
+                    "type": "string"
+                },
+                "sup": {
+                    "type": "string"
+                },
+                "__text": {
+                    "type": "string"
+                }
+            },
+            "required": [],
+            "title": "TentacledParagraph"
+        },
+        "PurpleContent": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "_styleCode": {
+                    "$ref": "#/definitions/ContentStyleCode"
+                },
+                "__text": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "__text",
+                "_styleCode"
+            ],
+            "title": "PurpleContent"
+        },
+        "TentacledContent": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "content": {
+                    "$ref": "#/definitions/PurpleContent"
+                },
+                "_styleCode": {
+                    "$ref": "#/definitions/ContentStyleCode"
+                },
+                "__text": {
+                    "type": "string"
+                },
+                "linkHtml": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/LinkHTMLElement"
+                    }
+                }
+            },
+            "required": [
+                "_styleCode"
+            ],
+            "title": "TentacledContent"
+        },
+        "Tfoot": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "tr": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/TfootTr"
+                    }
+                }
+            },
+            "required": [
+                "tr"
+            ],
+            "title": "Tfoot"
+        },
+        "TfootTr": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "td": {
+                    "$ref": "#/definitions/FluffyTd"
+                }
+            },
+            "required": [
+                "td"
+            ],
+            "title": "TfootTr"
+        },
+        "FluffyTd": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "sup": {
+                    "type": "string",
+                    "format": "integer"
+                },
+                "_align": {
+                    "type": "string"
+                },
+                "_colspan": {
+                    "type": "string",
+                    "format": "integer"
+                },
+                "_styleCode": {
+                    "type": "string"
+                },
+                "_valign": {
+                    "$ref": "#/definitions/Valign"
+                },
+                "__text": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "__text",
+                "_align",
+                "_colspan",
+                "_styleCode",
+                "_valign",
+                "sup"
+            ],
+            "title": "FluffyTd"
+        },
+        "IndecentSection": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "id": {
+                    "$ref": "#/definitions/SetIDClass"
+                },
+                "code": {
+                    "$ref": "#/definitions/FormCodeClass"
+                },
+                "text": {
+                    "$ref": "#/definitions/FluffyText"
+                },
+                "effectiveTime": {
+                    "$ref": "#/definitions/EffectiveTime"
+                },
+                "_ID": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "_ID",
+                "code",
+                "effectiveTime",
+                "id",
+                "text"
+            ],
+            "title": "IndecentSection"
+        },
+        "FluffyText": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "paragraph": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/Paragraph10"
+                    }
+                },
+                "table": {
+                    "$ref": "#/definitions/PurpleTable"
+                }
+            },
+            "required": [
+                "paragraph"
+            ],
+            "title": "FluffyText"
+        },
+        "StickyParagraph": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "content": {
+                    "$ref": "#/definitions/FluffyContent"
+                },
+                "__text": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "content"
+            ],
+            "title": "StickyParagraph"
+        },
+        "TentacledText": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "paragraph": {
+                    "$ref": "#/definitions/Paragraph11"
+                }
+            },
+            "required": [
+                "paragraph"
+            ],
+            "title": "TentacledText"
+        },
+        "IndigoParagraph": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "content": {
+                    "$ref": "#/definitions/CunningContent"
+                },
+                "__text": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "content"
+            ],
+            "title": "IndigoParagraph"
+        },
+        "IndecentParagraph": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "content": {
+                    "$ref": "#/definitions/MagentaContent"
+                },
+                "__text": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "content"
+            ],
+            "title": "IndecentParagraph"
+        },
+        "FluffyContent": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "linkHtml": {
+                    "$ref": "#/definitions/LinkHTMLElement"
+                },
+                "_styleCode": {
+                    "$ref": "#/definitions/ContentStyleCode"
+                },
+                "__text": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "_styleCode"
+            ],
+            "title": "FluffyContent"
+        },
+        "HilariousSection": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "id": {
+                    "$ref": "#/definitions/SetIDClass"
+                },
+                "code": {
+                    "$ref": "#/definitions/FormCodeClass"
+                },
+                "text": {
+                    "$ref": "#/definitions/StickyText"
+                },
+                "effectiveTime": {
+                    "$ref": "#/definitions/EffectiveTime"
+                },
+                "_ID": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "_ID",
+                "code",
+                "effectiveTime",
+                "id",
+                "text"
+            ],
+            "title": "HilariousSection"
+        },
+        "StickyText": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "paragraph": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/Paragraph13"
+                    }
+                }
+            },
+            "required": [
+                "paragraph"
+            ],
+            "title": "StickyText"
+        },
+        "HilariousParagraph": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "content": {
+                    "$ref": "#/definitions/PurpleContent"
+                }
+            },
+            "required": [
+                "content"
+            ],
+            "title": "HilariousParagraph"
+        },
+        "IndigoText": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "paragraph": {
+                    "$ref": "#/definitions/Paragraph14"
+                },
+                "table": {
+                    "$ref": "#/definitions/FluffyTable"
+                }
+            },
+            "required": [
+                "paragraph"
+            ],
+            "title": "IndigoText"
+        },
+        "AmbitiousParagraph": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "content": {
+                    "$ref": "#/definitions/FriskyContent"
+                },
+                "__text": {
+                    "type": "string"
+                },
+                "linkHtml": {
+                    "$ref": "#/definitions/LinkHTMLElement"
+                },
+                "sub": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "sup": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                }
+            },
+            "required": [],
+            "title": "AmbitiousParagraph"
+        },
+        "StickyContent": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "linkHtml": {
+                    "$ref": "#/definitions/LinkHTMLUnion"
+                },
+                "_styleCode": {
+                    "$ref": "#/definitions/ContentStyleCode"
+                },
+                "__text": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "_styleCode"
+            ],
+            "title": "StickyContent"
+        },
+        "FluffyTable": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "caption": {
+                    "type": "string"
+                },
+                "col": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/Col"
+                    }
+                },
+                "tbody": {
+                    "$ref": "#/definitions/FluffyTbody"
+                },
+                "_ID": {
+                    "type": "string"
+                },
+                "_width": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "_ID",
+                "_width",
+                "caption",
+                "col",
+                "tbody"
+            ],
+            "title": "FluffyTable"
+        },
+        "FluffyTbody": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "tr": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/FluffyTr"
+                    }
+                }
+            },
+            "required": [
+                "tr"
+            ],
+            "title": "FluffyTbody"
+        },
+        "FluffyTr": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "td": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/TentacledTd"
+                    }
+                }
+            },
+            "required": [
+                "td"
+            ],
+            "title": "FluffyTr"
+        },
+        "TentacledTd": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "paragraph": {
+                    "$ref": "#/definitions/Paragraph16"
+                },
+                "_align": {
+                    "$ref": "#/definitions/Align"
+                },
+                "_styleCode": {
+                    "$ref": "#/definitions/FluffyStyleCode"
+                },
+                "_valign": {
+                    "$ref": "#/definitions/Valign"
+                },
+                "_colspan": {
+                    "type": "string",
+                    "format": "integer"
+                }
+            },
+            "required": [
+                "_styleCode",
+                "_valign"
+            ],
+            "title": "TentacledTd"
+        },
+        "CunningParagraph": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "content": {
+                    "$ref": "#/definitions/PurpleContent"
+                },
+                "br": {
+                    "type": "string"
+                },
+                "__text": {
+                    "type": "string"
+                }
+            },
+            "required": [],
+            "title": "CunningParagraph"
+        },
+        "AmbitiousSection": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "id": {
+                    "$ref": "#/definitions/SetIDClass"
+                },
+                "code": {
+                    "$ref": "#/definitions/FormCodeClass"
+                },
+                "text": {
+                    "$ref": "#/definitions/IndecentText"
+                },
+                "effectiveTime": {
+                    "$ref": "#/definitions/EffectiveTime"
+                },
+                "_ID": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "_ID",
+                "code",
+                "effectiveTime",
+                "id",
+                "text"
+            ],
+            "title": "AmbitiousSection"
+        },
+        "IndecentText": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "paragraph": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/Paragraph17"
+                    }
+                }
+            },
+            "required": [
+                "paragraph"
+            ],
+            "title": "IndecentText"
+        },
+        "MagentaParagraph": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "content": {
+                    "$ref": "#/definitions/MischievousContent"
+                },
+                "linkHtml": {
+                    "$ref": "#/definitions/LinkHTMLElement"
+                },
+                "__text": {
+                    "type": "string"
+                },
+                "sup": {
+                    "type": "array",
+                    "items": {
+                        "type": "string",
+                        "format": "integer"
+                    }
+                }
+            },
+            "required": [],
+            "title": "MagentaParagraph"
+        },
+        "HilariousText": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "paragraph": {
+                    "$ref": "#/definitions/Paragraph18"
+                },
+                "table": {
+                    "$ref": "#/definitions/TentacledTable"
+                },
+                "list": {
+                    "$ref": "#/definitions/ListUnion"
+                }
+            },
+            "required": [
+                "paragraph"
+            ],
+            "title": "HilariousText"
+        },
+        "ListElement": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "item": {
+                    "$ref": "#/definitions/StickyItem"
+                },
+                "_listType": {
+                    "$ref": "#/definitions/ListType"
+                }
+            },
+            "required": [
+                "_listType",
+                "item"
+            ],
+            "title": "ListElement"
+        },
+        "PurpleList": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "item": {
+                    "$ref": "#/definitions/IndigoItem"
+                },
+                "_listType": {
+                    "$ref": "#/definitions/ListType"
+                }
+            },
+            "required": [
+                "_listType",
+                "item"
+            ],
+            "title": "PurpleList"
+        },
+        "PurpleItem": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "caption": {
+                    "$ref": "#/definitions/Caption"
+                },
+                "content": {
+                    "$ref": "#/definitions/ItemContentUnion"
+                },
+                "__text": {
+                    "type": "string"
+                },
+                "list": {
+                    "$ref": "#/definitions/ItemList"
+                },
+                "sup": {
+                    "type": "string"
+                },
+                "linkHtml": {
+                    "$ref": "#/definitions/LinkHTMLElement"
+                }
+            },
+            "required": [
+                "caption"
+            ],
+            "title": "PurpleItem"
+        },
+        "ListItemClass": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "caption": {
+                    "type": "string"
+                },
+                "__text": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "__text",
+                "caption"
+            ],
+            "title": "ListItemClass"
+        },
+        "ItemList": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "item": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/ListItemClass"
+                    }
+                },
+                "_listType": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "_listType",
+                "item"
+            ],
+            "title": "ItemList"
+        },
+        "FluffyItem": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "caption": {
+                    "type": "string"
+                },
+                "content": {
+                    "$ref": "#/definitions/IndigoContent"
+                },
+                "__text": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "__text",
+                "caption",
+                "content"
+            ],
+            "title": "FluffyItem"
+        },
+        "IndigoContent": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "linkHtml": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/LinkHTMLElement"
+                    }
+                },
+                "_styleCode": {
+                    "$ref": "#/definitions/ContentStyleCode"
+                },
+                "__text": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "__text",
+                "_styleCode",
+                "linkHtml"
+            ],
+            "title": "IndigoContent"
+        },
+        "FriskyParagraph": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "content": {
+                    "$ref": "#/definitions/BraggadociousContent"
+                },
+                "__text": {
+                    "type": "string"
+                },
+                "sub": {
+                    "type": "string"
+                },
+                "sup": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "br": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                }
+            },
+            "required": [],
+            "title": "FriskyParagraph"
+        },
+        "MischievousParagraph": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "content": {
+                    "$ref": "#/definitions/Content1"
+                },
+                "__text": {
+                    "type": "string"
+                },
+                "sub": {
+                    "$ref": "#/definitions/Br"
+                },
+                "sup": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                }
+            },
+            "required": [],
+            "title": "MischievousParagraph"
+        },
+        "TentacledTable": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "col": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/Col"
+                    }
+                },
+                "tbody": {
+                    "$ref": "#/definitions/TentacledTbody"
+                },
+                "_width": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "_width",
+                "col",
+                "tbody"
+            ],
+            "title": "TentacledTable"
+        },
+        "TentacledTbody": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "tr": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/TentacledTr"
+                    }
+                }
+            },
+            "required": [
+                "tr"
+            ],
+            "title": "TentacledTbody"
+        },
+        "TentacledTr": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "td": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/StickyTd"
+                    }
+                }
+            },
+            "required": [
+                "td"
+            ],
+            "title": "TentacledTr"
+        },
+        "StickyTd": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "paragraph": {
+                    "$ref": "#/definitions/Paragraph13"
+                },
+                "_align": {
+                    "$ref": "#/definitions/Align"
+                },
+                "_styleCode": {
+                    "$ref": "#/definitions/FluffyStyleCode"
+                },
+                "_valign": {
+                    "$ref": "#/definitions/Valign"
+                }
+            },
+            "required": [
+                "_styleCode",
+                "_valign"
+            ],
+            "title": "StickyTd"
+        },
+        "ObservationMedia": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "text": {
+                    "type": "string"
+                },
+                "value": {
+                    "$ref": "#/definitions/ObservationMediaValue"
+                },
+                "_ID": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "_ID",
+                "text",
+                "value"
+            ],
+            "title": "ObservationMedia"
+        },
+        "ObservationMediaValue": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "reference": {
+                    "$ref": "#/definitions/EffectiveTime"
+                },
+                "_mediaType": {
+                    "type": "string"
+                },
+                "_xsi:type": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "_mediaType",
+                "_xsi:type",
+                "reference"
+            ],
+            "title": "ObservationMediaValue"
+        },
+        "CunningSection": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "id": {
+                    "$ref": "#/definitions/SetIDClass"
+                },
+                "code": {
+                    "$ref": "#/definitions/FormCodeClass"
+                },
+                "title": {
+                    "$ref": "#/definitions/TitleUnion"
+                },
+                "effectiveTime": {
+                    "$ref": "#/definitions/EffectiveTime"
+                },
+                "component": {
+                    "$ref": "#/definitions/SectionComponentClass"
+                },
+                "_ID": {
+                    "type": "string"
+                },
+                "text": {
+                    "$ref": "#/definitions/CunningText"
+                }
+            },
+            "required": [
+                "_ID",
+                "code",
+                "effectiveTime",
+                "id"
+            ],
+            "title": "CunningSection"
+        },
+        "SectionComponentClass": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "section": {
+                    "$ref": "#/definitions/MagentaSection"
+                }
+            },
+            "required": [
+                "section"
+            ],
+            "title": "SectionComponentClass"
+        },
+        "MagentaSection": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "id": {
+                    "$ref": "#/definitions/SetIDClass"
+                },
+                "code": {
+                    "$ref": "#/definitions/FormCodeClass"
+                },
+                "text": {
+                    "$ref": "#/definitions/AmbitiousText"
+                },
+                "effectiveTime": {
+                    "$ref": "#/definitions/EffectiveTime"
+                },
+                "_ID": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "_ID",
+                "code",
+                "effectiveTime",
+                "id",
+                "text"
+            ],
+            "title": "MagentaSection"
+        },
+        "AmbitiousText": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "paragraph": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                }
+            },
+            "required": [
+                "paragraph"
+            ],
+            "title": "AmbitiousText"
+        },
+        "CunningText": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "paragraph": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/Paragraph20"
+                    }
+                }
+            },
+            "required": [
+                "paragraph"
+            ],
+            "title": "CunningText"
+        },
+        "BraggadociousParagraph": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "content": {
+                    "$ref": "#/definitions/CunningContent"
+                },
+                "__text": {
+                    "type": "string"
+                },
+                "linkHtml": {
+                    "$ref": "#/definitions/LinkHTMLElement"
+                }
+            },
+            "required": [],
+            "title": "BraggadociousParagraph"
+        },
+        "TitleClass": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "br": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "__text": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "__text",
+                "br"
+            ],
+            "title": "TitleClass"
+        },
+        "Excerpt": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "highlight": {
+                    "$ref": "#/definitions/Highlight"
+                }
+            },
+            "required": [
+                "highlight"
+            ],
+            "title": "Excerpt"
+        },
+        "Highlight": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "text": {
+                    "$ref": "#/definitions/HighlightText"
+                }
+            },
+            "required": [
+                "text"
+            ],
+            "title": "Highlight"
+        },
+        "HighlightText": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "paragraph": {
+                    "$ref": "#/definitions/Paragraph21"
+                },
+                "list": {
+                    "$ref": "#/definitions/FluffyList"
+                },
+                "table": {
+                    "$ref": "#/definitions/StickyTable"
+                }
+            },
+            "required": [],
+            "title": "HighlightText"
+        },
+        "FluffyList": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "item": {
+                    "$ref": "#/definitions/IndecentItem"
+                },
+                "_listType": {
+                    "$ref": "#/definitions/ListType"
+                }
+            },
+            "required": [
+                "_listType",
+                "item"
+            ],
+            "title": "FluffyList"
+        },
+        "TentacledItem": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "caption": {
+                    "$ref": "#/definitions/Caption"
+                },
+                "content": {
+                    "$ref": "#/definitions/IndecentContent"
+                },
+                "__text": {
+                    "type": "string"
+                },
+                "linkHtml": {
+                    "$ref": "#/definitions/LinkHTMLUnion"
+                }
+            },
+            "required": [
+                "__text",
+                "caption"
+            ],
+            "title": "TentacledItem"
+        },
+        "Paragraph1": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "content": {
+                    "$ref": "#/definitions/TentacledContent"
+                },
+                "linkHtml": {
+                    "$ref": "#/definitions/LinkHTMLElement"
+                },
+                "__text": {
+                    "type": "string"
+                }
+            },
+            "required": [],
+            "title": "Paragraph1"
+        },
+        "Paragraph2": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "linkHtml": {
+                    "$ref": "#/definitions/LinkHTMLElement"
+                },
+                "__text": {
+                    "type": "string"
+                },
+                "content": {
+                    "$ref": "#/definitions/Content2"
+                }
+            },
+            "required": [
+                "__text"
+            ],
+            "title": "Paragraph2"
+        },
+        "IndecentContent": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "linkHtml": {
+                    "$ref": "#/definitions/LinkHTMLElement"
+                },
+                "_styleCode": {
+                    "$ref": "#/definitions/ContentStyleCode"
+                }
+            },
+            "required": [
+                "_styleCode",
+                "linkHtml"
+            ],
+            "title": "IndecentContent"
+        },
+        "StickyTable": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "col": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/Col"
+                    }
+                },
+                "tbody": {
+                    "$ref": "#/definitions/StickyTbody"
+                },
+                "_width": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "_width",
+                "col",
+                "tbody"
+            ],
+            "title": "StickyTable"
+        },
+        "StickyTbody": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "tr": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/StickyTr"
+                    }
+                }
+            },
+            "required": [
+                "tr"
+            ],
+            "title": "StickyTbody"
+        },
+        "StickyTr": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "td": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/IndigoTd"
+                    }
+                }
+            },
+            "required": [
+                "td"
+            ],
+            "title": "StickyTr"
+        },
+        "IndigoTd": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "paragraph": {
+                    "$ref": "#/definitions/Paragraph23"
+                },
+                "_styleCode": {
+                    "$ref": "#/definitions/FluffyStyleCode"
+                },
+                "_valign": {
+                    "$ref": "#/definitions/Valign"
+                }
+            },
+            "required": [
+                "_styleCode",
+                "_valign",
+                "paragraph"
+            ],
+            "title": "IndigoTd"
+        },
+        "Paragraph3": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "br": {
+                    "type": "string"
+                },
+                "__text": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "__text",
+                "br"
+            ],
+            "title": "Paragraph3"
+        },
+        "Paragraph4": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "content": {
+                    "$ref": "#/definitions/IndecentContent"
+                },
+                "br": {
+                    "type": "string"
+                },
+                "__text": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "__text",
+                "br",
+                "content"
+            ],
+            "title": "Paragraph4"
+        },
+        "Subject": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "manufacturedProduct": {
+                    "$ref": "#/definitions/SubjectManufacturedProduct"
+                }
+            },
+            "required": [
+                "manufacturedProduct"
+            ],
+            "title": "Subject"
+        },
+        "SubjectManufacturedProduct": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "manufacturedProduct": {
+                    "$ref": "#/definitions/ManufacturedProductManufacturedProduct"
+                },
+                "subjectOf": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/ManufacturedProductSubjectOf"
+                    }
+                },
+                "consumedIn": {
+                    "$ref": "#/definitions/ConsumedIn"
+                }
+            },
+            "required": [
+                "consumedIn",
+                "manufacturedProduct",
+                "subjectOf"
+            ],
+            "title": "SubjectManufacturedProduct"
+        },
+        "ConsumedIn": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "substanceAdministration": {
+                    "$ref": "#/definitions/SubstanceAdministration"
+                }
+            },
+            "required": [
+                "substanceAdministration"
+            ],
+            "title": "ConsumedIn"
+        },
+        "SubstanceAdministration": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "routeCode": {
+                    "$ref": "#/definitions/FormCodeClass"
+                }
+            },
+            "required": [
+                "routeCode"
+            ],
+            "title": "SubstanceAdministration"
+        },
+        "ManufacturedProductManufacturedProduct": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "code": {
+                    "$ref": "#/definitions/MarketingActCode"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "formCode": {
+                    "$ref": "#/definitions/FormCodeClass"
+                },
+                "asEntityWithGeneric": {
+                    "$ref": "#/definitions/AsEntityWithGeneric"
+                },
+                "ingredient": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/Ingredient"
+                    }
+                },
+                "asContent": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/AsContent"
+                    }
+                }
+            },
+            "required": [
+                "asContent",
+                "asEntityWithGeneric",
+                "code",
+                "formCode",
+                "ingredient",
+                "name"
+            ],
+            "title": "ManufacturedProductManufacturedProduct"
+        },
+        "AsContent": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "quantity": {
+                    "$ref": "#/definitions/AsContentQuantity"
+                },
+                "containerPackagedProduct": {
+                    "$ref": "#/definitions/ContainerPackagedProduct"
+                },
+                "subjectOf": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/AsContentSubjectOf"
+                    }
+                }
+            },
+            "required": [
+                "containerPackagedProduct",
+                "quantity",
+                "subjectOf"
+            ],
+            "title": "AsContent"
+        },
+        "ContainerPackagedProduct": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "code": {
+                    "$ref": "#/definitions/MarketingActCode"
+                },
+                "formCode": {
+                    "$ref": "#/definitions/FormCodeClass"
+                }
+            },
+            "required": [
+                "code",
+                "formCode"
+            ],
+            "title": "ContainerPackagedProduct"
+        },
+        "MarketingActCode": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "_code": {
+                    "type": "string"
+                },
+                "_codeSystem": {
+                    "$ref": "#/definitions/PurpleCodeSystem"
+                }
+            },
+            "required": [
+                "_code",
+                "_codeSystem"
+            ],
+            "title": "MarketingActCode"
+        },
+        "AsContentQuantity": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "numerator": {
+                    "$ref": "#/definitions/Ator"
+                },
+                "denominator": {
+                    "$ref": "#/definitions/EffectiveTime"
+                }
+            },
+            "required": [
+                "denominator",
+                "numerator"
+            ],
+            "title": "AsContentQuantity"
+        },
+        "Ator": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "_unit": {
+                    "type": "string"
+                },
+                "_value": {
+                    "type": "string",
+                    "format": "integer"
+                }
+            },
+            "required": [
+                "_unit",
+                "_value"
+            ],
+            "title": "Ator"
+        },
+        "AsContentSubjectOf": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "marketingAct": {
+                    "$ref": "#/definitions/MarketingAct"
+                },
+                "characteristic": {
+                    "$ref": "#/definitions/PurpleCharacteristic"
+                }
+            },
+            "required": [],
+            "title": "AsContentSubjectOf"
+        },
+        "PurpleCharacteristic": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "code": {
+                    "$ref": "#/definitions/MarketingActCode"
+                },
+                "value": {
+                    "$ref": "#/definitions/FormCodeClass"
+                },
+                "_classCode": {
+                    "$ref": "#/definitions/CharacteristicClassCode"
+                }
+            },
+            "required": [
+                "_classCode",
+                "code",
+                "value"
+            ],
+            "title": "PurpleCharacteristic"
+        },
+        "MarketingAct": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "code": {
+                    "$ref": "#/definitions/MarketingActCode"
+                },
+                "statusCode": {
+                    "$ref": "#/definitions/StatusCode"
+                },
+                "effectiveTime": {
+                    "$ref": "#/definitions/MarketingActEffectiveTime"
+                }
+            },
+            "required": [
+                "code",
+                "effectiveTime",
+                "statusCode"
+            ],
+            "title": "MarketingAct"
+        },
+        "MarketingActEffectiveTime": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "low": {
+                    "$ref": "#/definitions/EffectiveTime"
+                }
+            },
+            "required": [
+                "low"
+            ],
+            "title": "MarketingActEffectiveTime"
+        },
+        "StatusCode": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "_code": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "_code"
+            ],
+            "title": "StatusCode"
+        },
+        "AsEntityWithGeneric": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "genericMedicine": {
+                    "$ref": "#/definitions/GenericMedicine"
+                }
+            },
+            "required": [
+                "genericMedicine"
+            ],
+            "title": "AsEntityWithGeneric"
+        },
+        "GenericMedicine": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "name": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "name"
+            ],
+            "title": "GenericMedicine"
+        },
+        "Ingredient": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "quantity": {
+                    "$ref": "#/definitions/IngredientQuantity"
+                },
+                "ingredientSubstance": {
+                    "$ref": "#/definitions/IngredientSubstance"
+                },
+                "_classCode": {
+                    "$ref": "#/definitions/IngredientClassCode"
+                }
+            },
+            "required": [
+                "_classCode",
+                "ingredientSubstance"
+            ],
+            "title": "Ingredient"
+        },
+        "IngredientSubstance": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "code": {
+                    "$ref": "#/definitions/MarketingActCode"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "activeMoiety": {
+                    "$ref": "#/definitions/IngredientSubstanceActiveMoiety"
+                }
+            },
+            "required": [
+                "code",
+                "name"
+            ],
+            "title": "IngredientSubstance"
+        },
+        "IngredientSubstanceActiveMoiety": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "activeMoiety": {
+                    "$ref": "#/definitions/ActiveMoietyActiveMoiety"
+                }
+            },
+            "required": [
+                "activeMoiety"
+            ],
+            "title": "IngredientSubstanceActiveMoiety"
+        },
+        "ActiveMoietyActiveMoiety": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "code": {
+                    "$ref": "#/definitions/MarketingActCode"
+                },
+                "name": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "code",
+                "name"
+            ],
+            "title": "ActiveMoietyActiveMoiety"
+        },
+        "IngredientQuantity": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "numerator": {
+                    "$ref": "#/definitions/Ator"
+                },
+                "denominator": {
+                    "$ref": "#/definitions/Ator"
+                }
+            },
+            "required": [
+                "denominator",
+                "numerator"
+            ],
+            "title": "IngredientQuantity"
+        },
+        "ManufacturedProductSubjectOf": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "approval": {
+                    "$ref": "#/definitions/Approval"
+                },
+                "marketingAct": {
+                    "$ref": "#/definitions/MarketingAct"
+                },
+                "characteristic": {
+                    "$ref": "#/definitions/FluffyCharacteristic"
+                }
+            },
+            "required": [],
+            "title": "ManufacturedProductSubjectOf"
+        },
+        "Approval": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "id": {
+                    "$ref": "#/definitions/RepresentedOrganizationID"
+                },
+                "code": {
+                    "$ref": "#/definitions/FormCodeClass"
+                },
+                "author": {
+                    "$ref": "#/definitions/ApprovalAuthor"
+                }
+            },
+            "required": [
+                "author",
+                "code",
+                "id"
+            ],
+            "title": "Approval"
+        },
+        "ApprovalAuthor": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "territorialAuthority": {
+                    "$ref": "#/definitions/TerritorialAuthority"
+                }
+            },
+            "required": [
+                "territorialAuthority"
+            ],
+            "title": "ApprovalAuthor"
+        },
+        "TerritorialAuthority": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "territory": {
+                    "$ref": "#/definitions/Territory"
+                }
+            },
+            "required": [
+                "territory"
+            ],
+            "title": "TerritorialAuthority"
+        },
+        "Territory": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "code": {
+                    "$ref": "#/definitions/MarketingActCode"
+                }
+            },
+            "required": [
+                "code"
+            ],
+            "title": "Territory"
+        },
+        "FluffyCharacteristic": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "code": {
+                    "$ref": "#/definitions/MarketingActCode"
+                },
+                "value": {
+                    "$ref": "#/definitions/CharacteristicValue"
+                },
+                "_classCode": {
+                    "$ref": "#/definitions/CharacteristicClassCode"
+                }
+            },
+            "required": [
+                "_classCode",
+                "code",
+                "value"
+            ],
+            "title": "FluffyCharacteristic"
+        },
+        "CharacteristicValue": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "originalText": {
+                    "type": "string"
+                },
+                "_code": {
+                    "type": "string"
+                },
+                "_codeSystem": {
+                    "$ref": "#/definitions/FormCodeCodeSystem"
+                },
+                "_displayName": {
+                    "type": "string"
+                },
+                "_xsi:type": {
+                    "type": "string"
+                },
+                "_unit": {
+                    "type": "string"
+                },
+                "_value": {
+                    "type": "string",
+                    "format": "integer"
+                },
+                "__text": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "_xsi:type"
+            ],
+            "title": "CharacteristicValue"
+        },
+        "MagentaText": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "paragraph": {
+                    "$ref": "#/definitions/Paragraph24"
+                },
+                "list": {
+                    "$ref": "#/definitions/ItemList"
+                },
+                "renderMultiMedia": {
+                    "$ref": "#/definitions/RenderMultiMedia"
+                }
+            },
+            "required": [
+                "paragraph"
+            ],
+            "title": "MagentaText"
+        },
+        "Paragraph5": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "content": {
+                    "$ref": "#/definitions/ItemContentUnion"
+                },
+                "__text": {
+                    "type": "string"
+                },
+                "sub": {
+                    "$ref": "#/definitions/Br"
+                },
+                "linkHtml": {
+                    "$ref": "#/definitions/LinkHTMLElement"
+                },
+                "br": {
+                    "$ref": "#/definitions/Br"
+                }
+            },
+            "required": [],
+            "title": "Paragraph5"
+        },
+        "Paragraph6": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "content": {
+                    "$ref": "#/definitions/HilariousContent"
+                }
+            },
+            "required": [
+                "content"
+            ],
+            "title": "Paragraph6"
+        },
+        "HilariousContent": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "content": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/PurpleContent"
+                    }
+                },
+                "_styleCode": {
+                    "$ref": "#/definitions/ContentStyleCode"
+                },
+                "__text": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "__text",
+                "_styleCode",
+                "content"
+            ],
+            "title": "HilariousContent"
+        },
+        "RenderMultiMedia": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "_ID": {
+                    "type": "string"
+                },
+                "_referencedObject": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "_ID",
+                "_referencedObject"
+            ],
+            "title": "RenderMultiMedia"
+        },
+        "CunningComponent": {
+            "anyOf": [
+                {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/PurpleComponent"
+                    }
+                },
+                {
+                    "$ref": "#/definitions/AmbitiousComponent"
+                }
+            ],
+            "title": "CunningComponent"
+        },
+        "MagentaComponent": {
+            "anyOf": [
+                {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/FluffyComponent"
+                    }
+                },
+                {
+                    "$ref": "#/definitions/HilariousComponent"
+                }
+            ],
+            "title": "MagentaComponent"
+        },
+        "FriskyComponent": {
+            "anyOf": [
+                {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/TentacledComponent"
+                    }
+                },
+                {
+                    "$ref": "#/definitions/IndecentComponent"
+                }
+            ],
+            "title": "FriskyComponent"
+        },
+        "MischievousComponent": {
+            "anyOf": [
+                {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/StickyComponent"
+                    }
+                },
+                {
+                    "$ref": "#/definitions/IndigoComponent"
+                }
+            ],
+            "title": "MischievousComponent"
+        },
+        "Paragraph7": {
+            "anyOf": [
+                {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/Paragraph8"
+                    }
+                },
+                {
+                    "$ref": "#/definitions/FluffyParagraph"
+                }
+            ],
+            "title": "Paragraph7"
+        },
+        "Paragraph8": {
+            "anyOf": [
+                {
+                    "$ref": "#/definitions/PurpleParagraph"
+                },
+                {
+                    "type": "string"
+                }
+            ],
+            "title": "Paragraph8"
+        },
+        "LinkHTMLUnion": {
+            "anyOf": [
+                {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/LinkHTMLElement"
+                    }
+                },
+                {
+                    "$ref": "#/definitions/LinkHTMLElement"
+                }
+            ],
+            "title": "LinkHTMLUnion"
+        },
+        "Br": {
+            "anyOf": [
+                {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                {
+                    "type": "string"
+                }
+            ],
+            "title": "Br"
+        },
+        "Paragraph9": {
+            "anyOf": [
+                {
+                    "$ref": "#/definitions/TentacledParagraph"
+                },
+                {
+                    "type": "string"
+                }
+            ],
+            "title": "Paragraph9"
+        },
+        "AmbitiousContent": {
+            "anyOf": [
+                {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/PurpleContent"
+                    }
+                },
+                {
+                    "$ref": "#/definitions/TentacledContent"
+                }
+            ],
+            "title": "AmbitiousContent"
+        },
+        "Paragraph10": {
+            "anyOf": [
+                {
+                    "$ref": "#/definitions/StickyParagraph"
+                },
+                {
+                    "type": "string"
+                }
+            ],
+            "title": "Paragraph10"
+        },
+        "Paragraph11": {
+            "anyOf": [
+                {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/Paragraph12"
+                    }
+                },
+                {
+                    "$ref": "#/definitions/IndecentParagraph"
+                },
+                {
+                    "type": "string"
+                }
+            ],
+            "title": "Paragraph11"
+        },
+        "Paragraph12": {
+            "anyOf": [
+                {
+                    "$ref": "#/definitions/IndigoParagraph"
+                },
+                {
+                    "type": "string"
+                }
+            ],
+            "title": "Paragraph12"
+        },
+        "CunningContent": {
+            "anyOf": [
+                {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/FluffyContent"
+                    }
+                },
+                {
+                    "$ref": "#/definitions/FluffyContent"
+                }
+            ],
+            "title": "CunningContent"
+        },
+        "MagentaContent": {
+            "anyOf": [
+                {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/FluffyContent"
+                    }
+                },
+                {
+                    "$ref": "#/definitions/PurpleContent"
+                }
+            ],
+            "title": "MagentaContent"
+        },
+        "Paragraph13": {
+            "anyOf": [
+                {
+                    "$ref": "#/definitions/HilariousParagraph"
+                },
+                {
+                    "type": "string"
+                }
+            ],
+            "title": "Paragraph13"
+        },
+        "Paragraph14": {
+            "anyOf": [
+                {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/Paragraph15"
+                    }
+                },
+                {
+                    "$ref": "#/definitions/HilariousParagraph"
+                },
+                {
+                    "type": "string"
+                }
+            ],
+            "title": "Paragraph14"
+        },
+        "Paragraph15": {
+            "anyOf": [
+                {
+                    "$ref": "#/definitions/AmbitiousParagraph"
+                },
+                {
+                    "type": "string"
+                }
+            ],
+            "title": "Paragraph15"
+        },
+        "FriskyContent": {
+            "anyOf": [
+                {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/StickyContent"
+                    }
+                },
+                {
+                    "$ref": "#/definitions/FluffyContent"
+                }
+            ],
+            "title": "FriskyContent"
+        },
+        "Paragraph16": {
+            "anyOf": [
+                {
+                    "$ref": "#/definitions/CunningParagraph"
+                },
+                {
+                    "type": "string"
+                }
+            ],
+            "title": "Paragraph16"
+        },
+        "Paragraph17": {
+            "anyOf": [
+                {
+                    "$ref": "#/definitions/MagentaParagraph"
+                },
+                {
+                    "type": "string"
+                }
+            ],
+            "title": "Paragraph17"
+        },
+        "MischievousContent": {
+            "anyOf": [
+                {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/PurpleContent"
+                    }
+                },
+                {
+                    "$ref": "#/definitions/FluffyContent"
+                }
+            ],
+            "title": "MischievousContent"
+        },
+        "ListUnion": {
+            "anyOf": [
+                {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/ListElement"
+                    }
+                },
+                {
+                    "$ref": "#/definitions/PurpleList"
+                }
+            ],
+            "title": "ListUnion"
+        },
+        "StickyItem": {
+            "anyOf": [
+                {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/PurpleItem"
+                    }
+                },
+                {
+                    "$ref": "#/definitions/ListItemClass"
+                }
+            ],
+            "title": "StickyItem"
+        },
+        "ItemContentUnion": {
+            "anyOf": [
+                {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/PurpleContent"
+                    }
+                },
+                {
+                    "$ref": "#/definitions/PurpleContent"
+                }
+            ],
+            "title": "ItemContentUnion"
+        },
+        "IndigoItem": {
+            "anyOf": [
+                {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/ListItemClass"
+                    }
+                },
+                {
+                    "$ref": "#/definitions/FluffyItem"
+                }
+            ],
+            "title": "IndigoItem"
+        },
+        "Paragraph18": {
+            "anyOf": [
+                {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/Paragraph19"
+                    }
+                },
+                {
+                    "$ref": "#/definitions/MischievousParagraph"
+                },
+                {
+                    "type": "string"
+                }
+            ],
+            "title": "Paragraph18"
+        },
+        "Paragraph19": {
+            "anyOf": [
+                {
+                    "$ref": "#/definitions/FriskyParagraph"
+                },
+                {
+                    "type": "string"
+                }
+            ],
+            "title": "Paragraph19"
+        },
+        "BraggadociousContent": {
+            "anyOf": [
+                {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/FluffyContent"
+                    }
+                },
+                {
+                    "$ref": "#/definitions/StickyContent"
+                }
+            ],
+            "title": "BraggadociousContent"
+        },
+        "Content1": {
+            "anyOf": [
+                {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/PurpleContent"
+                    }
+                },
+                {
+                    "$ref": "#/definitions/StickyContent"
+                }
+            ],
+            "title": "Content1"
+        },
+        "Paragraph20": {
+            "anyOf": [
+                {
+                    "$ref": "#/definitions/BraggadociousParagraph"
+                },
+                {
+                    "type": "string"
+                }
+            ],
+            "title": "Paragraph20"
+        },
+        "TitleUnion": {
+            "anyOf": [
+                {
+                    "$ref": "#/definitions/TitleClass"
+                },
+                {
+                    "type": "string"
+                }
+            ],
+            "title": "TitleUnion"
+        },
+        "IndecentItem": {
+            "anyOf": [
+                {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/TentacledItem"
+                    }
+                },
+                {
+                    "$ref": "#/definitions/ListItemClass"
+                }
+            ],
+            "title": "IndecentItem"
+        },
+        "Paragraph21": {
+            "anyOf": [
+                {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/Paragraph22"
+                    }
+                },
+                {
+                    "$ref": "#/definitions/Paragraph2"
+                },
+                {
+                    "type": "string"
+                }
+            ],
+            "title": "Paragraph21"
+        },
+        "Paragraph22": {
+            "anyOf": [
+                {
+                    "$ref": "#/definitions/Paragraph1"
+                },
+                {
+                    "type": "string"
+                }
+            ],
+            "title": "Paragraph22"
+        },
+        "Content2": {
+            "anyOf": [
+                {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/IndecentContent"
+                    }
+                },
+                {
+                    "$ref": "#/definitions/IndecentContent"
+                }
+            ],
+            "title": "Content2"
+        },
+        "Paragraph23": {
+            "anyOf": [
+                {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/Paragraph3"
+                    }
+                },
+                {
+                    "$ref": "#/definitions/Paragraph4"
+                },
+                {
+                    "type": "string"
+                }
+            ],
+            "title": "Paragraph23"
+        },
+        "Paragraph24": {
+            "anyOf": [
+                {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/Paragraph25"
+                    }
+                },
+                {
+                    "$ref": "#/definitions/Paragraph6"
+                },
+                {
+                    "type": "string"
+                }
+            ],
+            "title": "Paragraph24"
+        },
+        "Paragraph25": {
+            "anyOf": [
+                {
+                    "$ref": "#/definitions/Paragraph5"
+                },
+                {
+                    "type": "string"
+                }
+            ],
+            "title": "Paragraph25"
+        },
+        "FormCodeCodeSystem": {
+            "type": "string",
+            "enum": [
+                "2.16.840.1.113883.6.1",
+                "2.16.840.1.113883.3.26.1.1"
+            ],
+            "title": "FormCodeCodeSystem"
+        },
+        "ContentStyleCode": {
+            "type": "string",
+            "enum": [
+                "bold",
+                "underline",
+                "italics"
+            ],
+            "title": "ContentStyleCode"
+        },
+        "Align": {
+            "type": "string",
+            "enum": [
+                "center"
+            ],
+            "title": "Align"
+        },
+        "PurpleStyleCode": {
+            "type": "string",
+            "enum": [
+                "Botrule Lrule Toprule ",
+                "Botrule Toprule ",
+                "Rrule Botrule Toprule ",
+                "Lrule Botrule ",
+                "Botrule ",
+                "Rrule Botrule ",
+                "Botrule Lrule "
+            ],
+            "title": "PurpleStyleCode"
+        },
+        "Valign": {
+            "type": "string",
+            "enum": [
+                "top",
+                "middle"
+            ],
+            "title": "Valign"
+        },
+        "ListType": {
+            "type": "string",
+            "enum": [
+                "unordered"
+            ],
+            "title": "ListType"
+        },
+        "FluffyStyleCode": {
+            "type": "string",
+            "enum": [
+                "Rrule Botrule Lrule Toprule ",
+                "Rrule Botrule Toprule ",
+                "Rrule Lrule Botrule ",
+                "Rrule Botrule ",
+                "Rrule Botrule Lrule "
+            ],
+            "title": "FluffyStyleCode"
+        },
+        "Caption": {
+            "type": "string",
+            "enum": [
+                "•",
+                ""
+            ],
+            "title": "Caption"
+        },
+        "PurpleCodeSystem": {
+            "type": "string",
+            "enum": [
+                "2.16.840.1.113883.6.69",
+                "2.16.840.1.113883.1.11.19255",
+                "2.16.840.1.113883.3.26.1.1",
+                "2.16.840.1.113883.4.9",
+                "2.16.840.1.113883.5.28"
+            ],
+            "title": "PurpleCodeSystem"
+        },
+        "CharacteristicClassCode": {
+            "type": "string",
+            "enum": [
+                "OBS"
+            ],
+            "title": "CharacteristicClassCode"
+        },
+        "IngredientClassCode": {
+            "type": "string",
+            "enum": [
+                "ACTIM",
+                "IACT"
+            ],
+            "title": "IngredientClassCode"
+        }
+    }
+}
