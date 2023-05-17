@@ -1,0 +1,13 @@
+application:
+  name: Dailymed
+  apis:
+    dailymed:
+      url1: https://dailymed.nlm.nih.gov/dailymed/services/v2
+  database:
+    dbtype: mongodb
+    host: localhost
+    port: 27017
+    schema: dailymed
+    objects:
+      spls
+      spls_next
