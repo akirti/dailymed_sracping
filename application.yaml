@@ -9,5 +9,5 @@ application:
     port: 27017
     schema: dailymed
     objects:
-      spls
-      spls_next
+      - spls
+      - spls_next
