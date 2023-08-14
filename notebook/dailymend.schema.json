@@ -252,22 +252,77 @@
                                                                                 "properties":{
                                                                                     "classCode":{"type":"string" ,"isAttribute":true},
                                                                                     "quantity":{
-                                                                                        
+                                                                                        "type":"object",
+                                                                                        "properties":{
+                                                                                            "numerator":{
+                                                                                                "type":"object",
+                                                                                                "properties":{
+                                                                                                    "unit":{"type":"string","isAttribute":true},
+                                                                                                    "value":{"type":"string","isAttribute":true}
+                                                                                                }
+                                                                                            },
+                                                                                            "denominator":{
+                                                                                                "type":"object",
+                                                                                                "properties":{
+                                                                                                    "unit":{"type":"string","isAttribute":true},
+                                                                                                    "value":{"type":"string","isAttribute":true}
+                                                                                                }
+                                                                                            }
+                                                                                        }
+                                                                                    },
+                                                                                    "ingredientSubstance":{
+                                                                                        "type":"object",
+                                                                                        "properties":{
+                                                                                            "code":{
+                                                                                                "type":"object",
+                                                                                                "properties":{
+                                                                                                    "code":{"type":"string" ,"isAttribute":true},
+                                                                                                    "codeSystem":{"type":"string","isAttribute":true},
+                                                                                                    "displayname":{"type":"string","isAttribute":true},
+                                                                                                    "xsi:type":{"type":"string","isAttribute":true}
+                                                                                                }
+                                                                                            },
+                                                                                            "name":{
+                                                                                                "type":"string"
+                                                                                            },
+                                                                                            "activeMoiety":{
+                                                                                                "type":"object",
+                                                                                                "properties":{
+                                                                                                    "code":{
+                                                                                                        "type":"object",
+                                                                                                        "properties":{
+                                                                                                            "code":{"type":"string" ,"isAttribute":true},
+                                                                                                            "codeSystem":{"type":"string","isAttribute":true},
+                                                                                                            "displayname":{"type":"string","isAttribute":true},
+                                                                                                            "xsi:type":{"type":"string","isAttribute":true}
+                                                                                                        }
+                                                                                                    },
+                                                                                                    "name":{
+                                                                                                        "type":"string"
+                                                                                                    }
+                                                                                                }
+                                                                                            }
+                                                                                        }
                                                                                     }
                                                                                 }
                                                                             }
                                                                         },
                                                                         "asContent":{
-                                                                            "type":"object",
-                                                                            "properties":{}
+                                                                            "type":"array",
+                                                                            "items":{
+                                                                                "type":"object"
+                                                                            }
                                                                         },
                                                                         "subjectOf":{
-                                                                            "type":"object",
-                                                                            "properties":{}
+                                                                            "type":"array",
+                                                                            "items":{
+                                                                                "type":"object"
+                                                                            }
                                                                         },
                                                                         "consumedIn":{
                                                                             "type":"object",
-                                                                            "properties":{}
+                                                                            "properties":{
+                                                                                
                                                                         }
                                                                     }
                                                                 }
